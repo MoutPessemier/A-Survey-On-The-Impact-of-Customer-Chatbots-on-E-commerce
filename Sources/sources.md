@@ -16,3 +16,5 @@
 - https://www.emerce.nl/nieuws/billie-van-bol-com-doet-45-klantcontact
 - https://retailtrends.nl/item/54221/tien-jaar-billie-de-belangrijkste-succesfactoren-van-de-chatbot-van-bol-com
 
+### Chatlayer.ai
+https://chatlayer.ai/success-stories/
