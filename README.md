@@ -2,4 +2,4 @@
 
 In this thesis, we will take a better look at the impact customer chatbots have had on the e-commerce industry.
 
-&copy; 2021 - 2022 by Mout Pessemier, Rob De Putter and Laurens Keymolen
+&copy; 2021 - 2022 by Mout Pessemier, Rob De Putter and Laurens Van Keymolen
