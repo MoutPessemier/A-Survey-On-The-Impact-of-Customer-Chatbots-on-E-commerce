@@ -38,6 +38,7 @@ Different kind of chatbots:
 (2) Chatbots for long-term relationship and activities like having smalltalk.
 (3) Chatbots for customer service like giving specific information about an order.
 
-
+Source:
+Brandtzaeg PB, Følstad A (2018) Chatbots: Changing user needs and motivations. https://www.researchgate.net/publication/327191388_Chatbots_changing_user_needs_and_motivations
 
 
