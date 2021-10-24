@@ -1,0 +1,64 @@
+Motivation for research:
+Research has shown that nearly 75 percent of consumers have come into contact with poor customer service. Creating meaningful, lengthy and informative responses is a challenge. This paper states that there has been in revolution in the methods for developing chatbots. In the past chatbots were created by hand-written rules, and currently they have been replaced by end-to-end neural networks. In the paper they examined more than 70 publications about chatbots that were published in the past 5 years.
+
+Credit card case:
+In the world of credit cards, insurance is a very important thing. Consumers are often unaware of just what is included in insurance and what the benefits are. The chatbot is responsible to resolve these problems. It is very important to avoid and fix these problems because poor customer experience drastically reduces business performance.
+
+Benefits of using chatbots (business perspective):
+1.	Removes human factors which reduces the overload of call centers. This is certainly beneficial because an overload in call centers increases the waiting time for the consumers.
+2.	24/7 available
+3.	Chatbots are made with AI, this technology can analyze data better than humans.
+
+Different categories of chatbots:
+1.	Service (credit card case)
+2.	Commercial (streamline purchases for customers)
+3.	Entertainment (keep customers engaged)
+4.	Advisory (provide suggestions, give recommendations on service, etc.)
+
+Different types of chatbots:
+1.	Task-oriented = more conversation oriented
+2.	Non-task-oriented = more question oriented
+
+Different types of chatbots in this paper:
+1.	Goal-based chatbot:
+Classified based on the primary aim of this chatbot is to achieve its goal
+2.	Knowledge-based chatbot:
+Classified based on the knowledge they access.
+3.	Service-based chatbot:
+Classified based on facilities that are provided to the customer
+4.	Response generated-based chatbot
+Classified bases on what action it performs in response generation
+
+List of existing chatbots:
+1.	Elizabot
+2.	Alicebot
+3.	Elizabeth bot
+4.	Mitsuku
+5.	Cleverbot
+6.	Chatfuel
+7.	ChatScript
+8.	IBM Watson
+9.	Microsoft LUIS
+10.	Google Dialogflow
+11.	Amazon Lex
+
+Limitations of chatbots:
+1.	Fixed rule-based: The chatbot is stuck with a fixed ruleset, this is not a flexible solution.
+2.	Grammatical errors
+3.	Predefined or closed-domained: These chatbots can only respond to data that can be found in a database, the chatbot does not think on its own.
+4.	Ambiguity: The context, meaning of the sentences, result is unclear.
+5.	Language structure
+6.	Semantics
+7.	Sentiment analysis: Chatbot is not able to detect emotion.
+8.	Recommender system: Chatbot does not ask questions or advise on the topic.
+9.	Accuracy: Chatbot suddenly changes the subject and generates unpredictable response.
+10.	Self-learning: Chatbot does not use supervised learning
+11.	Support third-party integration: No third-party integration
+12.	Data processing: Chatbot does not process structured data directly (no relational database)
+13.	User interface: Chatbot does not have an interactive user interface and has poor documentation
+
+	Solution: chatbot that uses deep learning!
+
+
+
+
