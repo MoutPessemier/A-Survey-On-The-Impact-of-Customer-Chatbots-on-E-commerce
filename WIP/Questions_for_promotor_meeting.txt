@@ -6,6 +6,7 @@ Literature review:
 3.	How many pages should the literature review consist of?
 4.	What is the scope of the literature review? For example, should we also discuss technical aspects of how a chatbot works?
 5.	Do you have any particular tips on how to properly and efficiently analyze such a paper?
+6. 	How detailed do we need to describe what a chatbot is? Can we assume that our readers know what a chat bot is? 
 
 GitHub/Collaborate:
 1.	Do you have GitHub? Do you want to have access to the repository so you can see our progression in a continuous way?

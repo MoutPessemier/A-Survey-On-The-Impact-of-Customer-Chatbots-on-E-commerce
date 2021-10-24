@@ -1,0 +1,68 @@
+Chatbots: History, technology, and applications
+
+
+Synonyms for chatbots
+- Natural Dialog Systems 
+
+
+What is a chatbot?
+- A chatbot is an artificial intelligence program and a Human–computer​ Interaction (HCI) model. [1]
+- According to the dictionary, a chatbot is “A computer program designed to simulate conversation with human users, especially over the Internet” (Chatbot |Definition of chatbot in English by Lexico Dictionaries, 2019)
+- Artificial conversation entities, interactive agents, smart bots, and digital assistants are also known as chatbots.
+
+
+Customer Service and uses
+- Many companies use chatbots to support customers [9]
+- Customer care is available 24 h a day via the chatbot, enabling consumers to post their request regardless of the standard operating hours, which enhances user satisfaction
+- Respond to FAQ
+
+
+Advantages
+- Chatbots are more friendly and attractive to users than, for example, the static content search in frequently asked questions (FAQs) lists. They offer users comfortable and efficient assistance when communicating with them; they provide them with more engaging answers, directly responding to their problems. [3] [4]
+
+Conditions
+- The degree of trust a chatbot gains from its use depends on factors related to its behavior, appearance, and others related to its manufacturer, privacy issues, and protection. [5]
+- The development of this relationship of trust is also supported by the level to which the chatbot is human-like, which depends on the visual characteristics, how closely its name is related to a person, its personality, and its efficiency to handle human language. [6]
+
+Drawbacks / difficulties
+- Data security is a significant concern for both providers and users. [7]
+- Failure in intent understanding
+- Toxic content in chabot’s user inputs
+- Deception towards chatbots
+- Long replies where the vital information consists of one or two sentences hiding among several others may result in user discouragement and conversation vacation.
+- misused phrases, lousy intonation, poor pronunciation, use of subtle humor, speech impairments, use of slang, syntax errors [8]
+
+
+
+Sources
+[1] Bansal H., Khan R.
+    A review paper on human computer interaction
+    International Journal of Advanced Research in Computer Science and Software Engineering, 8 (53)   (2018), 10.23956/ijarcsse.v8i4.630
+
+[2] Chatbot |definition of chatbot in english by Lexico Dictionaries, (2019)
+Lexico Dictionaries |English website: https://www.lexico.com/en/definition/chatbot.
+
+[3] Brandtzaeg P., Følstad A. Why people use chatbots
+Kompatsiaris I., et al. (Eds.), Internet science: Vol. 10673, Springer, Cham (2017), 10.1007/978-3-319-70284-1_30
+
+[4] R. Ranoliya, B., Raghuwanshi, N., & Singh, S. (2017). Chatbot for university related FAQs. In 2017 international conference on advances in computing, communications and informatics (pp. 1525–1530). Udupi. https://doi.org/10.1109/ICACCI.2017.8126057.
+
+[5] Wallace R.S.
+The anatomy of a.l.I.C.e
+Epstein R., Roberts G., Beber G. (Eds.), Parsing the turing test: philosophical and methodological issues in the quest for the thinking computer, Springer Netherlands, Dordrecht (2009), pp. 181-210, 10.1007/978-1-4020-6710-5_13
+
+[6] Close
+Go E., Sundar S.S.
+Humanizing chatbots: The effects of visual, identity and conversational cues on humanness perceptions
+Computers in Human Behavior, 97 (2019), pp. 304-316, 10.1016/j.chb.2019.01.020
+
+[7] Zumstein D., Hundertmark S.
+Chatbots – an interactive technology for personalized communication
+Transactions and Services. IADIS International Journal on WWW/Internet, 15 (2017), pp. 96-109
+
+[8] The chat crash – when a chatbot fails (2020)
+Toptal Design Blog website: https://www.toptal.com/designers/ux/chatbot-fails. 
+
+[9] Johannsen F., Leist S., Konadl D., Basche M.
+Comparison of commercial chatbot solutions for supporting customer interaction
+ECIS (2018)
