@@ -1,0 +1,29 @@
+Questions for promotor :
+
+Literature review:
+1.	How many papers should we analyze?
+2.	How detailed should we analyze a paper? Is it just the results or also the way of how they found these results?
+3.	How many pages should the literature review consist of?
+4.	What is the scope of the literature review? For example, should we also discuss technical aspects of how a chatbot works?
+5.	Do you have any particular tips on how to properly and efficiently analyze such a paper?
+
+GitHub/Collaborate:
+1.	Do you have GitHub? Do you want to have access to the repository so you can see our progression in a continuous way?
+2.	Do you have tips for working together efficiently, specifically for a thesis?
+
+Interviews/Survey:
+1.	What kind of people should we best focus on for interviews? (CTO's, marketing, ...)
+2.	Will we have access to certain tools to create surveys?
+3.	Through what channels do we best look for people to answer our survey? This has to be done in a statistically correct way, and since we have quite a broad audience, this seems like a challenge.
+4.	Is this thesis in purpose of a particular company? If so, can we contact them through you to start doing more targeted research?
+
+General:
+1.	Are there tools available that we may use to prevent plagiarism?
+2.	How frequently is it possible to meet up?
+3.	Do you have any general tips or best practices for starting and continuing the thesis in a good way?
+4.	Do you have any questions about the activities we have done so far?
+
+Updates:
+1.	We work with GitHub so everything is in the cloud + it is easier to work together in the same document.
+2.	Mout has worked in a company that specializes in creating chatbots for businesses. This can be a source of information for questions or unclear aspects.
+3.	We work in Latex instead of Word, this is easier to manage everything in GitHub.
