@@ -15,6 +15,10 @@
 - [What Is a Chatbot?](https://www.oracle.com/be/chatbots/what-is-a-chatbot/)
 - [Chatbot: What is a Chatbot? Why are Chatbots Important?](https://www.expert.ai/blog/chatbot/)
 
+### User needs for chatbots
+
+- [Chatbots: Changing user needs and motivations](https://www.researchgate.net/publication/327191388_Chatbots_changing_user_needs_and_motivations)
+
 ### Billie: [Bol.com](https://bol.com/be/nl)
 
 - [Billie van bol.com doet 45% klantcontact](https://www.emerce.nl/nieuws/billie-van-bol-com-doet-45-klantcontact)
@@ -23,3 +27,7 @@
 ### [Chatlayer.ai](https://chatlayer.ai/)
 
 - [Succes Stories](https://chatlayer.ai/success-stories/)
+
+### How to set up a questionnaire?
+
+- [5 ways how to get people to take a survey | SurveyMonkey.](https://www.surveymonkey.com/curiosity/5-best-ways-to-get-survey-data/)
