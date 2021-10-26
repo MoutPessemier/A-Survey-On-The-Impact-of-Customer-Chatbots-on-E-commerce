@@ -7,4 +7,5 @@
 *.synctex.gz
 *.toc
 *.pdf
+*.bib.bak
 .DS_STORE
