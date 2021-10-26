@@ -1,16 +1,24 @@
-Questions for promotor :
+Questions and updates for promotor :
 
 Literature review:
-1.	How many papers should we analyze?
-2.	How detailed should we analyze a paper? Is it just the results or also the way of how they found these results?
-3.	How many pages should the literature review consist of?
-4.	What is the scope of the literature review? For example, should we also discuss technical aspects of how a chatbot works?
-5.	Do you have any particular tips on how to properly and efficiently analyze such a paper?
-6. 	How detailed do we need to describe what a chatbot is? Can we assume that our readers know what a chat bot is? 
+1.	How many papers should we analyze? --> 15 - 20 or more
+2.	How detailed should we analyze a paper? Is it just the results or also the way of how they found these results? --> 4 dimensions: research direction, results, methodology and 
+3.	How many pages should the literature review consist of? --> 6-7 pages
+4.	What is the scope of the literature review? For example, should we also discuss technical aspects of how a chatbot works? --> research question dependant, come up with 1-3 questions
+5. 	How detailed do we need to describe what a chatbot is? Can we assume that our readers know what a chat bot is? --> no, we cannot assume that they know (half a page is enough)
 
-GitHub/Collaborate:
-1.	Do you have GitHub? Do you want to have access to the repository so you can see our progression in a continuous way?
-2.	Do you have tips for working together efficiently, specifically for a thesis?
+General:
+1.	Are there tools available that we may use to prevent plagiarism? --> will be provided
+2.	How frequently is it possible to meet up? --> with mail for small questions, meeting for important ones
+
+--------
+
+Updates:
+1.	We work with GitHub so everything is in the cloud + it is easier to work together in the same document.
+2.	Mout has worked in a company that specialises in creating chatbots for businesses. This can be a source of information for questions or unclear aspects.
+3.	We work in Latex instead of Word, this is easier to manage everything in GitHub.
+
+-------
 
 Interviews/Survey:
 1.	What kind of people should we best focus on for interviews? (CTO's, marketing, ...)
@@ -18,13 +26,11 @@ Interviews/Survey:
 3.	Through what channels do we best look for people to answer our survey? This has to be done in a statistically correct way, and since we have quite a broad audience, this seems like a challenge.
 4.	Is this thesis in purpose of a particular company? If so, can we contact them through you to start doing more targeted research?
 
-General:
-1.	Are there tools available that we may use to prevent plagiarism?
-2.	How frequently is it possible to meet up?
-3.	Do you have any general tips or best practices for starting and continuing the thesis in a good way?
-4.	Do you have any questions about the activities we have done so far?
 
-Updates:
-1.	We work with GitHub so everything is in the cloud + it is easier to work together in the same document.
-2.	Mout has worked in a company that specializes in creating chatbots for businesses. This can be a source of information for questions or unclear aspects.
-3.	We work in Latex instead of Word, this is easier to manage everything in GitHub.
+Tips:
+1. 	Go for the most cited papers
+2. 	Divide tasks into steps of master thesis and divide work
+3. 	Find good papers and justify why we chose those papers
+4. 	Find good questions for the survey and justify why we choose those questions
+5. 	Pitch why we chose this topic
+
