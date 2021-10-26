@@ -1,0 +1,10 @@
+Possible research questions:
+
+1.	Do the business users still prefer to use human help rather than Chatbot?
+2.	What are the obstacles the customer service chatbots of today have to deal with?
+3.	What are the KPI’s / success factors of chatbots for customer service?
+4.	Does the entertaining customer service chatbot increase sales over a non-entertaining chatbot?
+5.	Does entertainment in customer service chatbots lower the purchase-barrier?
+6.	If a chatbot offers random information (offers, etc.), would consumers respond to it, and does this lead to more sales?
+7.	Are customers willing to share personal information with a chatbot to optimize customer service?
+8.	Does the human-likeness of a chatbot have a significant effect on customer service satisfaction?
