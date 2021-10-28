@@ -6,6 +6,6 @@
 *.log
 *.synctex.gz
 *.toc
-*.pdf
+/Thesis/*.pdf
 *.bib.bak
 .DS_STORE
