@@ -8,3 +8,11 @@ Possible research questions:
 6.	If a chatbot offers random information (offers, etc.), would consumers respond to it, and does this lead to more sales?
 7.	Are customers willing to share personal information with a chatbot to optimize customer service?
 8.	Does the human-likeness of a chatbot have a significant effect on customer service satisfaction?
+
+
+The direction we want to take:
+We want to focus on:
+- what are the struggles of a chatbot
+- what makes a chatbot succesfull in e-commerce?
+   - which charactersictics are important to have? (entertainment, human-like behaviour, social interaction, ...)
+   - how can you use these characteristics to drive people to buy more? (recommandations, personalised deals, ...)
