@@ -1,0 +1,132 @@
+A SURVEY ON EVALUATION METHODS FOR CHATBOTS
+
+Potential evaluation criteria
+- effectiveness
+- efficiency
+- goal achievability
+- the ability to satisfy users
+- how human-like is the chatbot
+- how entertaining is the chatbot
+- attentiveness
+- positivity
+- face
+- feeling about the negotiation
+- perceived rapport
+- information disclosure
+
+
+- Recent developments in Natural Language Processing (NLP) and increasingly available computing power and communication technologies have enabled rapid development and deployment of chatbots in various industries.
+- Along with preparedness of such a longstanding field as NLP, a maturity of Internet technologies has provided for developers with a diversity of platforms on which chatbots can be implemented.
+
+
+Chatbot Categorisation:
+- rule based
+- AI based
+
+
+Chatbot Domain Categorisation:
+- general domain: created to support conversations in open topics, may be applied to any discipline (some examples can be found in the text)
+- specific domain: focus on specific industries, has knowledge of the industry it is deployed in (some examples can be found in the text)
+
+
+Specific chatbots:
+- Business chatbots support customer service for business and e-commerce [39], [9], [30], help with task completion [5], [24], and improve user experience [13].
+
+
+goal- oriented chatbots, which whose main purpose is to assist users in a definite list of tasks, such as, buying a bus ticket. [19]
+
+
+
+Platforms for chatbots
+- Facebook Messenger/WhatsApp [6], [4]
+- Web based [14]
+- Standalone program [8]
+- 
+
+
+Architectures:
+
+- AI based: use machine learning algorithms to generate a response based on the data provided and keep on learning and improving based on the previous learning models
+
+
+- Rule based: uses algorithms either handcrafted or already existing ones as a decision maker to identify both knowledge and response
+	- pattern matching to identify inputs from a user
+
+
+Pre-Processing
+- Pattern matching is one of artificial intelligence’s technique that commonly used for designing chatbot. The process is to match the input from the user with the database and response from matching the input. (mostly used in rule based)
+- Parsing is a technique of artificial intelligence which used in form of algorithm to take text input and parse each text into a part corresponding to a predefined rule of algorithms such as left-right and bottom-up algorithm. (mostly ai based)
+- Term Frequency-Inverse Document Frequency (TF-IDF), a set of statistics of words for representing documents.
+
+
+Processing
+- Intent classification, is one of an important component of NLP which used to classify and label the intention of input from a user to use with a knowledge base. [36], [40], [4]
+- Dialogue planning is referred the system ability of a system to be able to manage the conversation between multiple users or ability to understand the context of a conversation with the individual user in case there is a switch of a subject within the same conversation [16]
+- Name entity recognition is one component of natural Language understanding Which uses for identifying and label name, location, person and etc. [36], [4]
+- Vector Recognition with Cosine Similarity is a measure of content-based similarity between two non-zero vectors represent text summary and reference system summary based on the vector space model. [37]
+- Lexicon is a collection of words and word elements that carry meaning. It is used as the dictionary to help the model to predict and segment input text from a user in order for the model to create a correct list of data for further processing [16]
+- Long Short- Term Memory (LSTM) is one kind of recurrent neural network (RNN) which is one technique in machine learning. And in chatbot, this technique helps the model/agent to classify the text input from user base on a conversation which divides into two types of memory. Long-term refers to the fact or the information that model can be used to learn or help predict conversation between user. This type of memory sometimes can be predefined by a creator. Short- term memory refers to the information or keyword that relevant only in a current conversation between agent and user. And only keep this kind of memory to use for only each conversation but not the whole system unlike Long- term memory this not going to use in a learning process of a model. [39], [40]
+
+
+Generation
+- Retrieval base: Retrieval systems search a user-issued utterance (called a query) in a large database and return a reply that best matches the query [35].
+- Generative base: Generative approaches, typically based on recurrent neural networks (RNNs), can synthesize new replies, but they suffer from the problem of generating short, meaningless utterances [35]
+
+
+
+Content Evaluation
+- Automatic Evaluation: evaluate the content by means of a computer
+	- precision: he measurement of how many times the information given to conversation is relevant to the topic of discussion in percentage.
+	- recall: the measurement of total response that the system can categorise into the relevance topic based on the conversation between users and system in percentage
+- Expert Evaluation: evaluation done by a human
+
+
+User Satisfaction: User satisfaction is a popular evaluation method for chatbots, where users interact with the target chatbot and rate the satisfaction usually in form of Likert scale. Researchers might also ask users for ratings on specific aspects, such as appropriateness, naturalness, etc.
+- Session Level Evaluation: is the user evaluation, where users are asked to evaluate the entire chat session on different factors.
+- Turn Level Evaluation: where users are asked to evaluate each response from a chatbot
+
+
+Functional Evaluation
+- based on goals: help complete a task
+- usage statistics: statistics can show how effective a chatbot is
+
+
+
+
+
+
+
+
+Sources
+[4] R. G. Athreya and R. Usbeck, “Enhancing Community Interactions with Data-Driven Chatbots The DBpedia Chatbot,” Iw3C2, 2018.
+
+[5] B. Behera, “Chappie-a semi-automatic intelligent chatbot,” 2016. Retrieved from https://www.cse.iitb.ac.in
+
+[6] J. Brixey, R. Hoegen, W. Lan, J. Rusow, K. Singla, X. Yin, R. Artstein, and A. Leuski, “SHIHbot: A Facebook chatbot for Sexual Health Information on HIV / AIDS,” Proceedings of 18th Annual Meeting of the Special Interest Group on Discourse and Dialogue, no. August, pp. 370– 373, 2017.
+
+[8] B. E. V. Comendador, B. M. B. Francisco, J. S. Medenilla, S. M. T. Nacion, and T. B. E. Serac, “Pharmabot: A Pediatric Generic Medicine Consultant Chatbot,” Journal of Automation and Control Engineering, vol. 3, no. 2, pp. 137– 140, 2015.
+
+[9] L. Cui, S. Huang, F. Wei, C. Tan, C. Duan, and M. Zhou, “SuperAgent: A Customer Service Chatbot for E- commerce Websites,” Proceedings of ACL 2017, System Demonstrations, pp. 97–102, 2017.
+
+[13] S. Gupta, D. Borkar, C. De Mello, and S. Patil, “An ecommerce website based chatbot,” International Journal of Computer Science and Information Technologies, vol. 6, no. 2, pp. 1483–1485, 2015.
+
+[14]  B. Heller, M. Procter, and D. Mah, “Freudbot: An investigation of chatbot technology in distance education,” Proceedings of World Conference on Educational Multimedia, Hypermedia and Telecommunications, no. March 2016, pp. 3913–3918, 2005.
+
+[16] R. Higashinaka, K. Imamura, T. Meguro, C. Miyazaki, N. Kobayashi, H. Sugiyama, T. Hirano, T. Makino, and Y. Matsuo, “Towards an open-domain conversational system fully based on natural language processing,” Proceedings of the 25th International Conference on Computational Linguistics: Technical Papers (COLING 2014), pp. 928– 939, 2014.
+
+[19] V. Ilievski1, C. Musat, H. Andreea, and M. Baeriswy, “Goal Oriented Chatbot Dialog Management Bootstrapping with Transfer Learning,” Proceedings of the Twenty- Seventh International Joint Conference on Artificial Intelligence (IJCAI-18), pp. 4115–4121, 2018
+
+[24]  X. Li, Y.-N. Chen, L. Li, J. Gao, and A. Celikyilmaz, “Endto-End Task-Completion Neural Dialogue Systems,” arXiv preprintarXiv:1703.01008, 2017.
+
+[30] M. Owda, Z. Bandar, and K. Crockett, “Conversation- based natural language interface to relational databases,” Proceedings – 2007 IEEE/WIC/ACM International Conference on Web Intelligence and Intelligent Agent Technology - Workshops, WI-IAT Workshops 2007, pp. 363–367, 2007.
+
+[35] Y. Song, R. Yan, X. Li, D. Zhao, and M. Zhang, “Two are Better than One: An Ensemble of Retrieval- and GenerationBased Dialog Systems,” arXiv preprint arXiv:1610.07149, vol. 1, pp. 1–11, 2016.
+
+[36] L. Vaira, Lucia, et al. MamaBot: a System based on ML and NLP for supporting Women and Families during Pregnancy. In: Proceedings of the 22nd International Database Engineering & Applications Symposium. ACM, 2018. p. 273-277.
+
+[37] S. Vassos, E. Malliaraki, F. D. Falco, J. D. Maggio, M. Massimetti, M. G. Nocentini, and A. Testa, “Art-bots: Toward chat-based conversational experiences in museums,” Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes
+in Bioinformatics), vol. 10045 LNCS, pp. 433–437, 2016.
+
+[39] A. Xu, Z. Liu, Y. Guo, V. Sinha, and R. Akkiraju, “A new chatbot for customer service on social media,” in Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems. ACM, 2017, pp. 3506– 3510.
+
+[40] R. Zhao, O. J. Romero, and A. Rudnicky, “SOGO: A Social Intelligent Negotiation Dialogue System,” Iva, 2018.
