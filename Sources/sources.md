@@ -19,6 +19,7 @@
 ### User needs for chatbots
 
 - [Chatbots: Changing user needs and motivations](https://www.researchgate.net/publication/327191388_Chatbots_changing_user_needs_and_motivations)
+- [Exploring consumers’ response to text-based chatbots in e-commerce: the moderating role of task complexity and chatbot disclosure] (https://www.emerald.com/insight/content/doi/10.1108/INTR-08-2020-0460/full/html?utm_source=rss&utm_medium=feed&utm_campaign=rss_journalLatest)
 
 ### Billie: [Bol.com](https://bol.com/be/nl)
 
