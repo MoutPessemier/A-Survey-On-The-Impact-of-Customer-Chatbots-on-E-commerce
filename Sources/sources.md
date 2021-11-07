@@ -15,11 +15,13 @@
 
 - [What Is a Chatbot?](https://www.oracle.com/be/chatbots/what-is-a-chatbot/)
 - [Chatbot: What is a Chatbot? Why are Chatbots Important?](https://www.expert.ai/blog/chatbot/)
+- [Artificial Intelligence in Electronic Commerce: Basic Chatbots and the Consumer Journey](https://www-ceeol-com.kuleuven.e-bronnen.be/search/article-detail?id=929501)
 
 ### User needs for chatbots
 
 - [Chatbots: Changing user needs and motivations](https://www.researchgate.net/publication/327191388_Chatbots_changing_user_needs_and_motivations)
 - [Exploring consumers’ response to text-based chatbots in e-commerce: the moderating role of task complexity and chatbot disclosure](https://www.emerald.com/insight/content/doi/10.1108/INTR-08-2020-0460/full/html?utm_source=rss&utm_medium=feed&utm_campaign=rss_journalLatest)
+- [Humanizing chatbots: The effects of visual, identity and conversational cues on humanness perceptions](https://www.sciencedirect.com/science/article/abs/pii/S0747563219300329)
 
 ### Billie: [Bol.com](https://bol.com/be/nl)
 
