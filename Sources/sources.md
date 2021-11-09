@@ -6,7 +6,6 @@
 - [Conversational Survey Chatbot: User Experience and Perception](http://portal.sinteza.singidunum.ac.rs/paper/814)
 - [Survey on Intelligent Chatbots: State-of-the-Art and Future Research Directions](https://www.researchgate.net/publication/333931397_Survey_on_Intelligent_Chatbots_State-of-the-Art_and_Future_Research_Directions)
 - [Users' experiences with chatbots: findings from a questionnaire study](https://www.researchgate.net/publication/340589816_Users'_experiences_with_chatbots_findings_from_a_questionnaire_study)
-- [Users' experiences with chatbots: findings from a questionnaire study](https://www.semanticscholar.org/paper/Customer-Service-Chatbots%3A-A-Qualitative-Interview-Goot-Hafkamp/cc3831ffb04c6deeb630f7cda150e079b87048dd)
 - [A Survey on Chatbot Implementation in Customer Service Industry through Deep Neural Networks](https://ieeexplore.ieee.org/abstract/document/8592630?casa_token=T-RaQ9yy3joAAAAA:MXjtobHu8lePwYOV1njbb2grw8m4fW8wQ_bVSQzP2WSPHH7l2apqgN5ns1GnVMo3G2nsYW8NY8k)
 - [A Survey on Evaluation Methods for Chatbots](https://dl.acm.org/doi/abs/10.1145/3323771.3323824?casa_token=tNyusNbuFVAAAAAA%3Aqu5D9EEIueV0G98z69_s32X4c_pfdNnybyQkoUUwAxKWAtHePDw-KG3-yF-umFV4tnl1iigTcPqCdw)
 - [Customer Service Chatbots: A Qualitative Interview Study into Customers Communication Journey](https://www.semanticscholar.org/paper/Customer-Service-Chatbots%3A-A-Qualitative-Interview-Goot-Hafkamp/cc3831ffb04c6deeb630f7cda150e079b87048dd)
