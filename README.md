@@ -12,7 +12,7 @@ We first took a look at the industy in which e-commerce chatbots are used. We di
 6. Issues and errors in the current generation of customer service chatbots
 
 ### Sources
-A list of the sources we used in this thesis can be found [here](https://www.mendeley.com/reference-manager/library/all-references).
+A list of the sources we used in this thesis can be found [here](https://www.mendeley.com/reference-manager/library/groups/private/eb05d60a-8880-377e-a544-78557637e304/all-references/).
 
 Afterwards, we conducted a survey about the impact customer service chatbots have on e-commerce.
 
