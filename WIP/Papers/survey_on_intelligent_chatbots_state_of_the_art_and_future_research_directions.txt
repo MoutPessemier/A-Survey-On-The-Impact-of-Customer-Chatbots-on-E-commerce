@@ -41,14 +41,18 @@ Sources
 system. In: Proceedings of the Workshop on Bridging the Gap: Academic and
 Industrial Research in Dialog Technologies, Association for Computational Lin-
 guistics, pp. 89–96 (2007)
+
 [5] de Haan, H., Snijder, J., van Nimwegen, C., Beun, R.J.: Chatbot personality and
 customer satisfaction (2018)
+
 [16] Androutsopoulou, A., Karacapilidis, N., Loukis, E., Charalabidis, Y.: Transforming
 the communication between citizens and government through AI-guided chatbots.
 Gov. Inf. Quart. 36, 358–367 (2018)
+
 [21] Forelle, M., Howard, P., Monroy-Hern´andez, A., Savage, S.: Political bots and
 the manipulation of public opinion in Venezuela. arXiv preprint arXiv:1507.07109
 (2015)
+
 [37] Thomas, N.: An e-business chatbot using AIML and LSA. In: 2016 Interna-
 tional Conference on Advances in Computing, Communications and Informatics
 (ICACCI), pp. 2740–2742. IEEE (2016)

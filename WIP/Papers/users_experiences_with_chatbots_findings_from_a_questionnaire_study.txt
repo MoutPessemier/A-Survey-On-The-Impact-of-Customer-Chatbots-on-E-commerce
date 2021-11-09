@@ -35,6 +35,9 @@ Also make make sure to talk about the two different types of chatbots: task-orie
 
 Sources
 [4] Brandtzaeg PB, Følstad A (2018) Chatbots: Changing user needs and motivations. Interactions 25(5):38–43
+
 [20] Følstad A, Brandtzaeg PB (2017) Chatbots and the new world of HCI. Interactions 24(4):38–42
+
 [27] Hill J, Ford WR, Farreras IG (2015) Real conversations with arti-ﬁcial intelligence: a comparison between human–human online conversations and human–chatbot conversations. Comput Hum Behav 49:245–250
+
 [28] Hornbæk K, Hertzum M (2017) Technology acceptance and user experience: A review of the experiential component in HCI. ACM Trans Comput-Hum Interaction (TOCHI) 24(5):33@@
