@@ -4,5 +4,6 @@ IR: Information Retrieval
 OCR: Optical Character Recognition
 NLP: Natural Language Processing
 NLU: Natural Language Understanding
-NLG: Natural Language Genereation
+NLG: Natural Language Generation
+AHP: Analytic Hierarchy Process
 TF-IDF: Term Frequency-Inverse Document Frequency
