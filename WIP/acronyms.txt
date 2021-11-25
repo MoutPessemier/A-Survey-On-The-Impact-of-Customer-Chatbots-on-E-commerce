@@ -1,6 +1,7 @@
 AI: Artificial Intelligence
 ML: Machine Learning
 IR: Information Retrieval
+HCI: Human-Computer Interaction
 OCR: Optical Character Recognition
 NLP: Natural Language Processing
 NLU: Natural Language Understanding
