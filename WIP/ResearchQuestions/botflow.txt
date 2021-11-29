@@ -2,8 +2,10 @@
 2. Have you had an encounter with a chatbot before [Y/N]
 
 YES:
-3. What was the name of the last chatbot you used?
-4. What what your encounter about?
+3. What is your gender?
+4. In which age category are you?
+5. What was the name of the last chatbot you used?
+6. What was your encounter about?
 - FAQ [A]
 - Product information [B]
 - Product recommendations [C]
@@ -15,7 +17,7 @@ A:
 
 
 B:
-- Did you but the product after receiving the information?
+- Did you buy the product after receiving the information?
 - Are you going to buy more products from this company in the future?
 
 
