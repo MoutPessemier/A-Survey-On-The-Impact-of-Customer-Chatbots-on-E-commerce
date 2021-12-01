@@ -20,9 +20,8 @@ We want to focus on:
 -----------------------
 Final research questions
 Main research question:
-Are the key attribute types present in customer service chatbots?
+Are key attribute types present in customer service chatbots?
 
 Sub-research questions:
 1.	What is the effect of the presence of key attribute types on the service level of a customer service chatbot?
-2.	Does the presence of the key attribute types affect the value creation of the company?
-
+2.	Does the presence of key attribute types in e-commerce chatbots affect the value creation of a company?
