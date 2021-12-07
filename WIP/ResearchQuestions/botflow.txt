@@ -4,27 +4,9 @@
 YES:
 3. What is your gender?
 4. In which age category are you?
-5. What was the name of the last chatbot you used?
-6. What was your encounter about?
-- FAQ [A]
-- Product information [B]
-- Product recommendations [C]
-
-
-A:
-- Was the chatbot able to help with your question?
-- Are you going to keep using this company?
-
-
-B:
-- Did you buy the product after receiving the information?
-- Are you going to buy more products from this company in the future?
-
-
-C:
-- Did you buy one of the recommended products?
-- Are you going to buy more products from this company in the future?
-
+5. Type of degree
+6. Country you live in
+7. What was the name of the last chatbot you used?
 
 
 General purpose questions (after the split into A, B or C): 
@@ -33,6 +15,9 @@ General purpose questions (after the split into A, B or C):
 - What do you find important when interacting with a chatbot? [1 trait]
 - If you had to describe the personality of the chatbot in one word, which word would you use?
 - What would you have done if the chatbot did not exist?
+
+
+99. Do you prefer interacting with a human or with a chatbot? 
 
 
 NO:
