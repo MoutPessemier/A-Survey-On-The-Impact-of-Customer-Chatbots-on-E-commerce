@@ -10,6 +10,7 @@
 \usepackage{tikz}
 \usepackage[titletoc]{appendix}
 \usepackage[round]{natbib}
+\usepackage{glossaries}
 
 
 %\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
@@ -27,23 +28,36 @@
 \allowdisplaybreaks
 
 
+\makeglossaries
 
+\newacronym{ai}{AI}{Artificiële Inteligentie}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{nlp}{NLP}{Natural Language Processing}
+\newacronym{nlg}{NLG}{Natural Language Generation}
+\newacronym{nlu}{NLU}{Natural Language Understanding}
+\newacronym{hci}{HCI}{Human-Computer Interaction}
+\newacronym{ahp}{AHP}{Analytical Hierarchy Process}
 
 \makeindex
 
 \begin{document}
 %Start
 \input{../LaTeX/Layout/Titelpagina.tex}
-\input{../LaTeX/Layout/Inhoud.tex}
+\input{../LaTeX/Layout/Contents.tex}
 
 
 
-%Abstract
+%Abstract & Thankword
 \input{../LaTeX/Abstract.tex}
+\input{../LaTeX/Thankword.tex}
 
-%Eigenlijke tekst
+%Actual Text
 \input{../LaTeX/Introduction.tex}
-
+\input{../LaTeX/LiteratureStudy.tex}
+\input{../LaTeX/Methodology.tex}
+\input{../LaTeX/Research.tex}
+\input{../LaTeX/Conclusion.tex}
+\input{../LaTeX/Summary.tex}
 
 
 %Bijlagen

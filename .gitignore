@@ -6,6 +6,10 @@
 *.log
 *.synctex.gz
 *.toc
-/Thesis/*.pdf
 *.bib.bak
 .DS_STORE
+*.bcf
+*.glo
+*.ist
+*.pdf
+*.run.xml
