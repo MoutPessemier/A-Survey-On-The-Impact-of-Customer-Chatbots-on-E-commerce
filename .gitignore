@@ -1,17 +1,51 @@
-# Generated Files
-
+## Core latex/pdflatex auxiliary files:
 *.aux
-*.bbl
-*.blg
+*.lof
 *.log
-*.synctex.gz
+*.lot
+*.fls
+*.out
 *.toc
-*.bib.bak
-.DS_STORE
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
 *.bcf
-*.glo
-*.ist
-/Thesis/*.pdf
-/Thesis/build/*.pdf
-/Thesis/build/Masterproef.pdf
+*.blg
+*-blx.aux
+*-blx.bib
 *.run.xml
+*.bib.bak
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+*.slg
+*.slo
+*.sls
+*.ist
+
+## Output PDFs
+.pdf
+/Thesis/*.pdf
+
+## Mac OS generated files
+.DS_STORE
