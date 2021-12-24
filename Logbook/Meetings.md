@@ -4,7 +4,5 @@
 | 26/10/2021 | Mout, Laurens, Rob, Mr. Etikala                 | first meeting with Mr. Etikala: we've been given the freedom to go the direction we want within this broad topic         | 45 minutes |
 | 09/11/2021 | Mout, Laurens, Rob                              | discussing approaches to literature review                                                                               | 2 hours    |
 | 24/11/2021 | Mout, Laurens, Rob                              | giving feedback on elaborated pieces of literature study + arrange thesis planning + brainstom session about methodology | 10 hours   |
-|            |                                                 |                                                                                                                          |            |
-|            |                                                 |                                                                                                                          |            |
-|            |                                                 |                                                                                                                          |            |
 | 22/12/2021 | Mout, Laurens, Rob, Mr. Etikala, Mr. Vanthienen | Feedback draft versions literature review, research questions and methodology                                            | 45 minutes |
+| 22/12/2021 | Mout, Laurens, Rob, Brecht                      | Meeting with [Chatlayer.ai](https://chatlayer.ai/) about the future of our thesis and partnership                                     | 45 minutes |
