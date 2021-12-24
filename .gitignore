@@ -11,5 +11,7 @@
 *.bcf
 *.glo
 *.ist
-*.pdf
+/Thesis/*.pdf
+/Thesis/build/*.pdf
+/Thesis/build/Masterproef.pdf
 *.run.xml
