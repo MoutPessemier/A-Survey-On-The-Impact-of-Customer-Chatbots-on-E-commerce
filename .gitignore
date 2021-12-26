@@ -10,6 +10,7 @@
 *.fot
 *.cb
 *.cb2
+*.idx
 .*.lb
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
