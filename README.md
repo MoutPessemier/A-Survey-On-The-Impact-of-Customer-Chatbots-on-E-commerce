@@ -15,5 +15,3 @@ Afterwards, we conducted a survey about the impact customer service chatbots hav
 
 ### Sources
 A list of the sources we used in this thesis can be found [here](https://www.mendeley.com/reference-manager/library/groups/private/eb05d60a-8880-377e-a544-78557637e304/all-references/).
-
-&copy; 2021 - 2022 by Mout Pessemier, Rob De Putter and Laurens Van Keymolen
