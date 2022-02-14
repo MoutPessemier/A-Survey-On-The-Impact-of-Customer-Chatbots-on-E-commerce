@@ -6,7 +6,7 @@
 | Write Literature Draft                             | Mout                                            | 4:30u     |
 | Write Methodology Draft                            | Mout                                            | 2:30u     |
 | Implement BotFlow                                  | Mout                                            | 1:30u     |
-| WOrk out structure and direction for methodology   | Mout                                            | 2:00u     |
+| Work out structure and direction for methodology   | Mout                                            | 2:00u     |
 
 
 ## Remarks
