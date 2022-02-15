@@ -8,17 +8,24 @@
 | Write Methodology Draft                            | 2:30u     |
 | Implement BotFlow                                  | 1:30u     |
 | Work out structure and direction for methodology   | 2:00u     |
+| File fusion into one file: literature study        | 2:00u     |
 | Limit scope and specify RQ's and survey            | 4:00u     |
+| File fusion into one file: methodology             | 2:00u     |
 
 
 # Rob
 | Task                                               | Time      |
 | -------------------------------------------------- | --------- |
+| Work out structure and direction for methodology   | 1:00u     |
 | Limit scope and specify RQ's and survey            | 4:00u     |
+| File fusion into one file: literature study        | 2:00u     |
 
 # Laurens
 | Task                                               | Time      |
 | -------------------------------------------------- | --------- |
+| Skeleton structure                                 | 5:00u     |
+| Structural changes                                 | 2:00u     |
+| Literature draft                                   | 4:00u     |
 
 ## Remarks
 - Everybody has to read multiple papers, the reading time won't be included in the logbook

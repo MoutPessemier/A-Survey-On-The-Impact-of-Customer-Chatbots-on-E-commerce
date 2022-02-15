@@ -7,4 +7,5 @@
 | 12/11 - 22/12 | Mout, Laurens, Rob                              | Some general smaller meetings about the nitty-gritty of it all, details and to solve question                            | 3 hours    |
 | 22/12/2021    | Mout, Laurens, Rob, Mr. Etikala, Mr. Vanthienen | Feedback draft versions literature review, research questions and methodology                                            | 45 minutes |
 | 22/12/2021    | Mout, Laurens, Rob, Brecht                      | Meeting with [Chatlayer.ai](https://chatlayer.ai/) about the future of our thesis and partnership                        | 45 minutes |
-| 14/02/2022    | Mout, Rob, Mr. Etikala                          | Crisis meeting about the current situation and directions for the future                                                 | 60 minutes |
+| 14/02/2022    | Mout, Rob, Mr. Etikala                          | Crisis meeting about the current situation and directions for the future                                                 | 1 hour     |
+| 15/02/2022    | Mout, Rob                                       | Tasks divided, working in same call on different pieces, helping eachother                                               | 2 hours    |
