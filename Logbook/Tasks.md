@@ -26,7 +26,7 @@
 | Work out structure and direction for methodology   | 1:00u     |
 | Limit scope and specify RQ's and survey            | 4:00u     |
 | File fusion into one file: literature study        | 2:00u     |
-| Contact with enterprises                           | 1:15u     |
+| Contact with enterprises                           | 1:25u     |
 | Interview questions                                | 1:15u     |
 
 # Laurens
