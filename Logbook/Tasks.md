@@ -14,7 +14,7 @@
 | File fusion into one file: methodology             | 2:00u     |
 | Contact with enterprises                           | 1:00u     |
 | Interview questions                                | 1:15u     |
-
+| Rewrite Laurens' part                              | 2:00u     |
 
 # Rob
 | Task                                               | Time      |
