@@ -15,6 +15,7 @@
 | Contact with enterprises                           | 1:00u     |
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part                              | 2:00u     |
+| Applied feedback interview questions               | 2:00u     |
 
 # Rob
 | Task                                               | Time      |
@@ -29,6 +30,7 @@
 | Contact with enterprises                           | 1:25u     |
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part                              | 1:00u     |
+| Applied feedback interview questions               | 2:00u     |
 
 # Laurens
 | Task                                               | Time      |

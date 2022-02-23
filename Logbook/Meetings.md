@@ -10,3 +10,4 @@
 | 14/02/2022    | Mout, Rob, Mr. Etikala                          | Crisis meeting about the current situation and directions for the future                                                 | 1 hour     |
 | 15/02/2022    | Mout, Rob                                       | Tasks divided, working in same call on different pieces, helping eachother                                               | 2 hours    |
 | 16/02/2022    | Mout, Rob                                       | Contact with Proximus made, invent interview questions, attempted contact with Telenet                                   | 2.5 hours  |
+| 16/02/2022    | Mout, Rob, Mr. Etikala, Mr. Vanthienen          | Meeting about updated survey and interview questions + overall feedback                                                  | 1.5 hours  |
