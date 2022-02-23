@@ -28,6 +28,7 @@
 | File fusion into one file: literature study        | 2:00u     |
 | Contact with enterprises                           | 1:25u     |
 | Interview questions                                | 1:15u     |
+| Rewrite Laurens' part                              | 1:00u     |
 
 # Laurens
 | Task                                               | Time      |
