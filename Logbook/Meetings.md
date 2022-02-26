@@ -12,3 +12,4 @@
 | 16/02/2022    | Mout, Rob                                       | Contact with Proximus made, invent interview questions, attempted contact with Telenet                                   | 2.5 hours  |
 | 16/02/2022    | Mout, Rob, Mr. Etikala, Mr. Vanthienen          | Meeting about updated survey and interview questions + overall feedback                                                  | 1.5 hours  |
 | 16/02/2022    | Mout, Rob, Sandrine D'Oreye                     | Interview Proximus                                                                                                       | 1 hour     |
+| 16/02/2022    | Mout, Rob                                       | Reformulating survey questions                                                                                           | 3.25 hours |
