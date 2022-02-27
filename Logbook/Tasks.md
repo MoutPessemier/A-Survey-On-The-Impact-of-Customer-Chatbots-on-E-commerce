@@ -29,7 +29,7 @@
 | File fusion into one file: literature study        | 2:00u     |
 | Contact with enterprises                           | 1:25u     |
 | Interview questions                                | 1:15u     |
-| Rewrite Laurens' part                              | 1:00u     |
+| Rewrite Laurens' part (add telecom part)           | 3:00u     |
 | Applied feedback interview questions               | 2:00u     |
 
 # Laurens
