@@ -16,6 +16,7 @@
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part                              | 2:00u     |
 | Applied feedback interview questions               | 2:00u     |
+| Start write-out interview Proximus                 | 40min     |
 
 # Rob
 | Task                                               | Time      |
