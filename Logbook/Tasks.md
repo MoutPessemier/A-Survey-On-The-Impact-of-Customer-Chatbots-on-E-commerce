@@ -18,6 +18,7 @@
 | Applied feedback interview questions               | 2:00u     |
 | Start write-out interview Proximus                 | 40min     |
 | Put questions into survey                          | 40min     |
+| Continue write-out interview Proximus              | 40min     |
 
 # Rob
 | Task                                               | Time      |
