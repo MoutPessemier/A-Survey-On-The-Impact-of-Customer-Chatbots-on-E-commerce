@@ -15,3 +15,5 @@
 | 16/02/2022    | Mout, Rob                                       | Reformulating survey questions                                                                                           | 3.25 hours |
 | 05/03/2022    | Mout, Rob                                       | Applied feedback survey + made survey                                                                                    | 2.75 hours |
 | 06/03/2022    | Mout, Rob                                       | Finalise survey + launch survey + prepared midterm presentation                                                          | 2.5 hours  |
+| 09/03/2022    | Mout, Rob, Mr. Vanthienen, other group          | Midterm presentation                                                                                                     | 1 hour     |
+| 16/03/2022    | Mout, Rob, Mr. Etikala                          | Recap midterm presentation + feedback                                                                                    | 1 hour     |. 
