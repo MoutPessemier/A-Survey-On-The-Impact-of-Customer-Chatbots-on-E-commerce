@@ -19,6 +19,7 @@
 | Start write-out interview Proximus                 | 40min     |
 | Put questions into survey                          | 40min     |
 | Continue write-out interview Proximus              | 40min     |
+| Continue write-out interview Proximus              | 45min     |
 
 # Rob
 | Task                                               | Time      |
