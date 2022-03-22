@@ -20,6 +20,7 @@
 | Put questions into survey                          | 40min     |
 | Continue write-out interview Proximus              | 40min     |
 | Continue write-out interview Proximus              | 45min     |
+| Finalise write-out interview Proximus              | 2:00u     |
 
 # Rob
 | Task                                               | Time      |
