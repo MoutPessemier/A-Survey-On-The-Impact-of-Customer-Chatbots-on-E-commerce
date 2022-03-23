@@ -36,6 +36,9 @@
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part (add telecom part)           | 3:00u     |
 | Applied feedback interview questions               | 2:00u     |
+| Fix + launch survey                                | 30min     |
+| Fix interviews with telecom providers              | 2:30u     |
+| Apply feedback 1st semester to literature review   | 3:00u     |
 
 # Laurens
 | Task                                               | Time      |
