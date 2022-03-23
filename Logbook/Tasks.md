@@ -38,7 +38,7 @@
 | Applied feedback interview questions               | 2:00u     |
 | Fix + launch survey                                | 30min     |
 | Fix interviews with telecom providers              | 2:30u     |
-| Apply feedback 1st semester to literature review   | 3:00u     |
+| Apply feedback 1st semester to literature review   | 4:15u     |
 
 # Laurens
 | Task                                               | Time      |
