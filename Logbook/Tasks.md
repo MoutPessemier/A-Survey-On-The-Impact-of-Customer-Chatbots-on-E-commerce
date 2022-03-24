@@ -21,6 +21,9 @@
 | Continue write-out interview Proximus              | 40min     |
 | Continue write-out interview Proximus              | 45min     |
 | Finalise write-out interview Proximus              | 2:00u     |
+| Apply feedback 1st semester to literature review   | 1:00u     |
+
+Total: 47:00u
 
 # Rob
 | Task                                               | Time      |
@@ -32,7 +35,7 @@
 | Work out structure and direction for methodology   | 1:00u     |
 | Limit scope and specify RQ's and survey            | 4:00u     |
 | File fusion into one file: literature study        | 2:00u     |
-| Contact with enterprises                           | 1:25u     |
+| Contact with enterprises                           | 1:30u     |
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part (add telecom part)           | 3:00u     |
 | Applied feedback interview questions               | 2:00u     |
@@ -40,12 +43,16 @@
 | Fix interviews with telecom providers              | 2:30u     |
 | Apply feedback 1st semester to literature review   | 4:15u     |
 
+Total: 39:15
+
 # Laurens
 | Task                                               | Time      |
 | -------------------------------------------------- | --------- |
 | Skeleton structure                                 | 5:00u     |
 | Structural changes                                 | 2:00u     |
 | Literature draft                                   | 4:00u     |
+
+Total: 11:00u
 
 ## Remarks
 - Meetings count as time spent for everyone. During the meetings we discussed how to tackle things, which direction we want to go and more.
