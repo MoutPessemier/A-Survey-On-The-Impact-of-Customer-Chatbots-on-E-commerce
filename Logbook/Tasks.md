@@ -23,8 +23,9 @@
 | Finalise write-out interview Proximus              | 2:00u     |
 | Apply feedback 1st semester to literature review   | 1:00u     |
 | Apply feedback 1st semester to literature review 2 | 1:00u     |
+| Apply feedback 1st semester to literature review 3 | 15min     |
 
-Total: 48:00u
+Total: 48:15u
 
 # Rob
 | Task                                               | Time      |
