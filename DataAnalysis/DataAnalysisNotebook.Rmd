@@ -1,0 +1,104 @@
+---
+title: "Data Analysis"
+output: html_notebook
+---
+## Read and prepare data
+```{r}
+d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=";")
+View(d)
+```
+
+The data has been anonimised in Excel.
+
+From the 48 entries, we had to throw 3 away:
+
+- 2 because of the used chatbot: they were no telecom chatbots.
+- 1 entry was a duplicate.
+
+#### Cleaning
+
+```{r}
+names(d)[names(d) == "How.old.are.you."] <- "age"
+names(d)[names(d) == "What.is.the.highest.degree.you.currently.have."] <- "degree"
+names(d)[names(d) == "What.is.your.gender."] <- "gender"
+names(d)[names(d) == "Which.company.s.chatbot.did.you.interact.with."] <- "chatbot"
+```
+
+```{r}
+library(dplyr) 
+telenet <- filter(d, chatbot == "Telenet")
+proximus <- filter(d, chatbot == "Proximus")
+orange <- filter(d, chatbot == "Orange")
+tMobile <- filter(d, chatbot == "T-Mobile")
+KPN <- filter(d, chatbot == "KPN")
+```
+
+## Overview of the data
+###### Age
+```{r}
+meanAgeTelenet = mean(telenet$age)
+meanAgeTelenet
+varAgeTelenet = sd(telenet$age)
+varAgeTelenet
+
+meanAgeProximus = mean(proximus$age)
+meanAgeProximus
+varAgeProximus = sd(telenet$age)
+varAgeProximus
+
+meanAgeTmobile = mean(tMobile$age)
+meanAgeTmobile
+varAgeTmobile = sd(tMobile$age)
+varAgeTmobile
+
+meanAgeOrange = mean(orange$age)
+meanAgeOrange
+varAgeOrange = sd(orange$age)
+varAgeOrange
+
+meanAgeKPN = mean(KPN$age)
+meanAgeKPN
+varAgeKPN = sd(KPN$age)
+varAgeKPN
+```
+
+###### Task Category
+```{r}
+barplot(table(telenet$TaskCategory),
+        main="Frequency of each category in Telenet",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+
+barplot(table(proximus$TaskCategory),
+        main="Frequency of each category in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(orange$TaskCategory),
+        main="Frequency of each category in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(tMobile$TaskCategory),
+        main="Frequency of each category in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(KPN$TaskCategory),
+        main="Frequency of each category in KPN",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+```
+
+## Comparative Study
+
+
+
+## Importance Study
+
