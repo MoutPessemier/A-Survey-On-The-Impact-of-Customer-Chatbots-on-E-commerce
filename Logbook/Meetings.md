@@ -20,3 +20,4 @@
 | 19/03/2022    | Mout, Rob                                       | Divide tasks + TODO's                                                                                                    | 30 minutes | 
 | 28/03/2022    | Mout, Rob                                       | Discuss updates + divide tasks + TODO's this week                                                                        | 45 minutes | 
 | 02/04/2022    | Mout, Rob                                       | Finalised distribution of survey (Reddit, SurveyCircle, Quora, Twitter, Facebook, ...)                                   | 1.5 hours  | 
+| 02/04/2022    | Mout, Rob                                       | Beta data cleanup + start data analytics                                                                                 | 1.75 hours |
