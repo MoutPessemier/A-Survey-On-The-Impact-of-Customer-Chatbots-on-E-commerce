@@ -19,7 +19,7 @@
 | Put questions into survey                          | 40min     |
 | Write-out interview Proximus                       | 4:05u     |
 | Apply feedback 1st semester to literature review   | 2:15u     |
-| Data Analysis (also see meeting)                   | 45min     |
+| Data Analysis (also see meeting)                   | 1:25u     |
 
 
 Total: 49:00u
