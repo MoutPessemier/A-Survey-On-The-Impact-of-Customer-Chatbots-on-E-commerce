@@ -2,6 +2,12 @@
 title: "Data Analysis"
 output: html_notebook
 ---
+## Libraries
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
 ## Read and prepare data
 ```{r}
 d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=",")
@@ -43,7 +49,7 @@ names(d)[names(d) == "Did.you.enjoy.interacting.with.the.chatbot."] <- "q10"
 names(d)[names(d) == "Was.the.chatbot.capable.of.completing.the.task.on.its.own."] <- "q11"
 names(d)[names(d) == "Did.the.chatbot.ask.you.relevant.questions.to.gather.the.information.to.solve.your.task."] <- "q12"
 names(d)[names(d) == "Did.the.chatbot.deliver.a.better.quality.of.service.than.a.human."] <- "q13"
-names(d)[names(d) == "Did.the.chatbot.interact.in.a.respectful.way." ] <- "q14"
+names(d)[names(d) == "Did.the.chatbot.interact.in.a.respectful.way."] <- "q14"
 names(d)[names(d) == "Was.the.chatbot.unable.to.complete.your.task."] <- "q15"
 names(d)[names(d) == "The.service.provided.by.the.human.was.of.better.quality."] <- "q16"
 names(d)[names(d) == "Did.you.feel.you.could.trust.the.information.provided.by.the.chatbot."] <- "q17"
@@ -86,7 +92,6 @@ names(d)[names(d) == "At.times.I.didnt.understand.what.the.chatbot.expected.of.m
 
 Now we sort per chatbot provider:
 ```{r}
-library(dplyr) 
 telenet <- filter(d, chatbot == "Telenet")
 proximus <- filter(d, chatbot == "Proximus")
 orange <- filter(d, chatbot == "Orange")
@@ -119,6 +124,19 @@ barplot(table(telenet$platform),
         xlab="Task Category",
         ylab="Count",
         col="blue")
+
+barplot(table(telenet$gender),
+        main="Frequency of each gender in Telenet",
+        xlab="Task Category",
+        ylab="Count",
+        col=c("red", "blue"))
+
+barplot(table(telenet$degree),
+        main="Frequency of each degree in Telenet",
+        xlab="Task Category",
+        ylab="Count",
+        cex.names=0.55,
+        col="blue")
 ```
 
 ### Proximus
@@ -144,6 +162,19 @@ barplot(table(proximus$platform),
         main="Frequency of each platform in Proximus",
         xlab="Task Category",
         ylab="Count",
+        col="blue")
+
+barplot(table(proximus$gender),
+        main="Frequency of each gender in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        col=c("red", "blue"))
+
+barplot(table(proximus$degree),
+        main="Frequency of each degree in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        cex.names=0.55,
         col="blue")
 ```
 
@@ -171,6 +202,19 @@ barplot(table(tMobile$platform),
         xlab="Task Category",
         ylab="Count",
         col="blue")
+
+barplot(table(tMobile$gender),
+        main="Frequency of each gender in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        col=c("blue"))
+
+barplot(table(tMobile$degree),
+        main="Frequency of each degree in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        cex.names=0.55,
+        col="blue")
 ```
 
 ### Orange
@@ -196,6 +240,19 @@ barplot(table(orange$platform),
         main="Frequency of each platform in Orange",
         xlab="Task Category",
         ylab="Count",
+        col="blue")
+
+barplot(table(orange$gender),
+        main="Frequency of each gender in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        col=c("blue"))
+
+barplot(table(orange$degree),
+        main="Frequency of each degree in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        cex.names=0.55,
         col="blue")
 ```
 
@@ -223,7 +280,26 @@ barplot(table(orange$platform),
         #xlab="Task Category",
         #ylab="Count",
         #col="blue")
+
+#barplot(table(KPN$gender),
+        #main="Frequency of each gender in KPN",
+        #xlab="Task Category",
+        #ylab="Count",
+        #col=c("red", "blue"))
+
+#barplot(table(KPN$degree),
+        #main="Frequency of each degree in KPN",
+        #xlab="Task Category",
+        #ylab="Count",
+        #cex.names=0.55,
+        #col="blue")
 ```
+
+```{r}
+ggplot(d, aes(x=chatbot, y=age)) + geom_point(colour="black", size=1) + stat_summary(fun.y=mean, geom="point", shape=1, size=2, colour="red", fill="red") + ggtitle("Age per chatbot provider")
+```
+
+<!-- shift focus to from company based to task category based -->
 
 ## Importance Study
 
