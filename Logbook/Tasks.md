@@ -16,16 +16,13 @@
 | Interview questions                                | 1:15u     |
 | Rewrite Laurens' part                              | 2:00u     |
 | Applied feedback interview questions               | 2:00u     |
-| Start write-out interview Proximus                 | 40min     |
 | Put questions into survey                          | 40min     |
-| Continue write-out interview Proximus              | 40min     |
-| Continue write-out interview Proximus              | 45min     |
-| Finalise write-out interview Proximus              | 2:00u     |
-| Apply feedback 1st semester to literature review   | 1:00u     |
-| Apply feedback 1st semester to literature review 2 | 1:00u     |
-| Apply feedback 1st semester to literature review 3 | 15min     |
+| Write-out interview Proximus                       | 4:05u     |
+| Apply feedback 1st semester to literature review   | 2:15u     |
+| Data Analysis (also see meeting)                   | 45min     |
 
-Total: 48:15u
+
+Total: 49:00u
 
 # Rob
 | Task                                               | Time      |
