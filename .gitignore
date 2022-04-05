@@ -50,3 +50,6 @@
 
 ## Mac OS generated files
 .DS_STORE
+
+## Output R Studio
+/DataAnalysis/*.nb.html
