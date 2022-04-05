@@ -4,26 +4,87 @@ output: html_notebook
 ---
 ## Read and prepare data
 ```{r}
-d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=";")
+d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=",")
 View(d)
 ```
 
-The data has been anonimised in Excel.
+The data has been anonimised in Excel. A new column was created called 'taskCategory'. The tasks performed are categorised in one of the following 4 categories:
+
+- FAQ
+- Personalised question
+- Complaint
+- Sales
 
 From the 48 entries, we had to throw 3 away:
 
 - 2 because of the used chatbot: they were no telecom chatbots.
 - 1 entry was a duplicate.
 
-#### Cleaning
-
+Some of the columns were renamed to have an easier time working with the variable names
 ```{r}
 names(d)[names(d) == "How.old.are.you."] <- "age"
 names(d)[names(d) == "What.is.the.highest.degree.you.currently.have."] <- "degree"
 names(d)[names(d) == "What.is.your.gender."] <- "gender"
 names(d)[names(d) == "Which.company.s.chatbot.did.you.interact.with."] <- "chatbot"
+names(d)[names(d) == "In.what.language.did.you.interact.with.the.chatbot."] <- "language"
+names(d)[names(d) == "Through.which.platform.did.you.interact.with.the.chatbot."] <- "platform"
+
+# Comparative study questions
+names(d)[names(d) == "Did.you.have.any.difficulties.using.the.chatbot."] <- "q1"
+names(d)[names(d) == "The.chatbot.did.not.ask.the.right.questions.to.solve.your.task."] <- "q2"
+names(d)[names(d) == "The.chatbot.didn.t.know.what.he.was.talking.about."] <- "q3"
+names(d)[names(d) == "Was.the.chatbot.polite."] <- "q4"
+names(d)[names(d) == "Did.the.chatbot.fulfil.your.task.correctly."] <- "q5"
+names(d)[names(d) == "Was.the.chatbot.easy.to.use."] <- "q6"
+names(d)[names(d) == "Was.it.a.task.to.interact.with.the.chatbot."] <- "q7"
+names(d)[names(d) == "Did.the.chatbot.need.help.from.a.help.desk.agent.to.complete.your.task."] <- "q8"
+names(d)[names(d) == "Did.the.chatbot.contain.enough.knowledge.to.help.with.your.problem."] <- "q9"
+names(d)[names(d) == "Did.you.enjoy.interacting.with.the.chatbot."] <- "q10"
+names(d)[names(d) == "Was.the.chatbot.capable.of.completing.the.task.on.its.own."] <- "q11"
+names(d)[names(d) == "Did.the.chatbot.ask.you.relevant.questions.to.gather.the.information.to.solve.your.task."] <- "q12"
+names(d)[names(d) == "Did.the.chatbot.deliver.a.better.quality.of.service.than.a.human."] <- "q13"
+names(d)[names(d) == "Did.the.chatbot.interact.in.a.respectful.way." ] <- "q14"
+names(d)[names(d) == "Was.the.chatbot.unable.to.complete.your.task."] <- "q15"
+names(d)[names(d) == "The.service.provided.by.the.human.was.of.better.quality."] <- "q16"
+names(d)[names(d) == "Did.you.feel.you.could.trust.the.information.provided.by.the.chatbot."] <- "q17"
+names(d)[names(d) == "Did.the.chatbot.perform.the.task.as.you.expected.it.to."] <- "q18"
+names(d)[names(d) == "Could.you.solve.your.problem.question.after.using.the.chatbot."] <- "q19"
+
+# Importance Study questions
+# Scenario 1
+names(d)[names(d) == "The.chatbot.DOES.NOT.execute.the.given.task.successfully."] <- "s1q1"
+names(d)[names(d) == "The.chatbot.can.NOT.perform.the.requested.service.to.the.same.level.as.a.human.agent."] <- "s1q2"
+names(d)[names(d) == "The.chatbot.knows.at.least.as.much.as.an.agent.about.the.requested.service."] <- "s1q3"
+names(d)[names(d) == "The.chatbot.executes.the.given.task.successfully."] <- "s1q4"
+names(d)[names(d) == "The.chatbot.knows.less.than.an.agent.about.the.requested.service."] <- "s1q5"
+names(d)[names(d) == "The.chatbot.can.perform.the.requested.service.to.the.same.level.as.a.human.agent."] <- "s1q6"
+
+# Scenario 2
+names(d)[names(d) == "The.chatbot.DOES.NOT.execute.the.given.task.successfully..1"] <- "s2q1"
+names(d)[names(d) == "The.chatbot.can.NOT.perform.the.requested.service.to.the.same.level.as.a.human.agent..1"] <- "s2q2"
+names(d)[names(d) == "The.chatbot.knows.at.least.as.much.as.an.agent.about.the.requested.service..1"] <- "s2q3"
+names(d)[names(d) == "The.chatbot.executes.the.given.task.successfully..1"] <- "s2q4"
+names(d)[names(d) == "The.chatbot.knows.less.than.an.agent.about.the.requested.service..1"] <- "s2q5"
+names(d)[names(d) == "The.chatbot.can.perform.the.requested.service.to.the.same.level.as.a.human.agent..1"] <- "s2q6"
+
+# Scenario 3
+names(d)[names(d) == "The.chatbot.DOES.NOT.execute.the.given.task.successfully..2"] <- "s3q1"
+names(d)[names(d) == "The.chatbot.can.NOT.perform.the.requested.service.to.the.same.level.as.a.human.agent..2"] <- "s3q2"
+names(d)[names(d) == "The.chatbot.knows.at.least.as.much.as.an.agent.about.the.requested.service..2"] <- "s3q3"
+names(d)[names(d) == "The.chatbot.executes.the.given.task.successfully..2"] <- "s3q4"
+names(d)[names(d) == "The.chatbot.knows.less.than.an.agent.about.the.requested.service..2"] <- "s3q5"
+names(d)[names(d) == "The.chatbot.can.perform.the.requested.service.to.the.same.level.as.a.human.agent..2"] <- "s3q6"
+
+# General
+names(d)[names(d) == "The.chatbot.is.NOT.available.at.all.times."] <- "gq1"
+names(d)[names(d) == "The.chatbot.is.easy.to.use."] <- "gq2"
+names(d)[names(d) == "The.chatbot.communicates.in.a.robotic...non.empathic.way."] <- "gq3"
+names(d)[names(d) == "The.chatbot.is.available.at.all.times."] <- "gq4"
+names(d)[names(d) == "The.chatbot.is.NOT.easy.to.use."] <- "gq5"
+names(d)[names(d) == "At.times.I.didnt.understand.what.the.chatbot.expected.of.me."] <- "gq6"
 ```
 
+Now we sort per chatbot provider:
 ```{r}
 library(dplyr) 
 telenet <- filter(d, chatbot == "Telenet")
@@ -33,72 +94,136 @@ tMobile <- filter(d, chatbot == "T-Mobile")
 KPN <- filter(d, chatbot == "KPN")
 ```
 
-## Overview of the data
-###### Age
+## Comparative Study
+### Telenet
 ```{r}
 meanAgeTelenet = mean(telenet$age)
 meanAgeTelenet
 varAgeTelenet = sd(telenet$age)
 varAgeTelenet
 
-meanAgeProximus = mean(proximus$age)
-meanAgeProximus
-varAgeProximus = sd(telenet$age)
-varAgeProximus
-
-meanAgeTmobile = mean(tMobile$age)
-meanAgeTmobile
-varAgeTmobile = sd(tMobile$age)
-varAgeTmobile
-
-meanAgeOrange = mean(orange$age)
-meanAgeOrange
-varAgeOrange = sd(orange$age)
-varAgeOrange
-
-meanAgeKPN = mean(KPN$age)
-meanAgeKPN
-varAgeKPN = sd(KPN$age)
-varAgeKPN
-```
-
-###### Task Category
-```{r}
-barplot(table(telenet$TaskCategory),
+barplot(table(telenet$taskCategory),
         main="Frequency of each category in Telenet",
         xlab="Task Category",
         ylab="Count",
         col="blue")
 
-
-barplot(table(proximus$TaskCategory),
-        main="Frequency of each category in Proximus",
+barplot(table(telenet$language),
+        main="Frequency of each language interaction in Telenet",
         xlab="Task Category",
         ylab="Count",
         col="blue")
 
-barplot(table(orange$TaskCategory),
-        main="Frequency of each category in Orange",
-        xlab="Task Category",
-        ylab="Count",
-        col="blue")
-
-barplot(table(tMobile$TaskCategory),
-        main="Frequency of each category in T-Mobile",
-        xlab="Task Category",
-        ylab="Count",
-        col="blue")
-
-barplot(table(KPN$TaskCategory),
-        main="Frequency of each category in KPN",
+barplot(table(telenet$platform),
+        main="Frequency of each platform in Telenet",
         xlab="Task Category",
         ylab="Count",
         col="blue")
 ```
 
-## Comparative Study
+### Proximus
+```{r}
+meanAgeProximus = mean(proximus$age)
+meanAgeProximus
+varAgeProximus = sd(proximus$age)
+varAgeProximus
 
+barplot(table(proximus$taskCategory),
+        main="Frequency of each category in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
 
+barplot(table(proximus$language),
+        main="Frequency of each language interaction in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(proximus$platform),
+        main="Frequency of each platform in Proximus",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+```
+
+### T-Mobile
+```{r}
+meanAgeTmobile = mean(tMobile$age)
+meanAgeTmobile
+varAgeTmobile = sd(tMobile$age)
+varAgeTmobile
+
+barplot(table(tMobile$taskCategory),
+        main="Frequency of each category in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(tMobile$language),
+        main="Frequency of each language interaction in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(tMobile$platform),
+        main="Frequency of each platform in T-Mobile",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+```
+
+### Orange
+```{r}
+meanAgeOrange = mean(orange$age)
+meanAgeOrange
+varAgeOrange = sd(orange$age)
+varAgeOrange
+
+barplot(table(orange$taskCategory),
+        main="Frequency of each category in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(orange$language),
+        main="Frequency of each language interaction in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+
+barplot(table(orange$platform),
+        main="Frequency of each platform in Orange",
+        xlab="Task Category",
+        ylab="Count",
+        col="blue")
+```
+
+### KPN
+```{r}
+#meanAgeKPN = mean(KPN$age)
+#meanAgeKPN
+#varAgeKPN = sd(KPN$age)
+#varAgeKPN
+
+#barplot(table(KPN$taskCategory),
+        #main="Frequency of each category in KPN",
+        #xlab="Task Category",
+        #ylab="Count",
+        #col="blue")
+
+#barplot(table(KPN$language),
+        #main="Frequency of each language interaction in KPN",
+        #xlab="Task Category",
+        #ylab="Count",
+        #col="blue")
+
+#barplot(table(KPN$platform),
+        #main="Frequency of each platform in KPN",
+        #xlab="Task Category",
+        #ylab="Count",
+        #col="blue")
+```
 
 ## Importance Study
 
