@@ -43,10 +43,13 @@
 *.slo
 *.sls
 *.ist
+*.alg
+*.ilg
+*ind
 
 ## Output PDFs
-.pdf
-/Thesis/*.pdf
+/Thesis/build/Masterproef.pdf
+/**/Masterproef.pdf
 
 ## Mac OS generated files
 .DS_STORE
