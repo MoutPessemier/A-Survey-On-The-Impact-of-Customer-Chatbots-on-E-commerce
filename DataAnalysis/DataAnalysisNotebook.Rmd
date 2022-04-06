@@ -10,8 +10,8 @@ library(ggplot2)
 
 ## Read and prepare data
 ```{r}
+# If you want to run our file, you only have to change this path to the correct path on your local machine.
 d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=",")
-View(d)
 ```
 
 The data has been anonimised in Excel. A new column was created called 'taskCategory'. The tasks performed are categorised in one of the following 4 categories:
@@ -99,7 +99,7 @@ tMobile <- filter(d, chatbot == "T-Mobile")
 KPN <- filter(d, chatbot == "KPN")
 ```
 
-## Comparative Study
+## Data Exploration
 ### Telenet
 ```{r}
 meanAgeTelenet = mean(telenet$age)
@@ -295,10 +295,77 @@ barplot(table(orange$degree),
         #col="blue")
 ```
 
+### Environment variables
+#### Age
 ```{r}
-ggplot(d, aes(x=chatbot, y=age)) + geom_point(colour="black", size=1) + stat_summary(fun.y=mean, geom="point", shape=1, size=2, colour="red", fill="red") + ggtitle("Age per chatbot provider")
+ggplot(d, aes(x=chatbot, y=age)) + geom_point(colour="black", size=1) + stat_summary(fun=mean, geom="point", shape=1, size=2, colour="red", fill="red") + ggtitle("Age per chatbot provider")
 ```
 
+#### Degree
+```{r}
+dfDegree <- d %>%
+  group_by(degree) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(perc = `n` / sum(`n`)) %>%
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+
+ggplot(dfDegree, aes(x="",y=perc, fill=degree)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+```
+
+#### Gender
+```{r}
+dfGender <- d %>%
+  group_by(gender) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(perc = `n` / sum(`n`)) %>%
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+
+ggplot(dfGender, aes(x="",y=perc, fill=gender)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+```
+
+#### Chatbot
+```{r}
+dfChatbot <- d %>%
+  group_by(chatbot) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(perc = `n` / sum(`n`)) %>%
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+
+ggplot(dfChatbot, aes(x="",y=perc, fill=chatbot)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+```
+
+#### Language
+```{r}
+dfLang <- d %>%
+  group_by(language) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(perc = `n` / sum(`n`)) %>%
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+
+ggplot(dfLang, aes(x="",y=perc, fill=language)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+```
+
+#### Platform
+```{r}
+dfPlat <- d %>%
+  group_by(platform) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(perc = `n` / sum(`n`)) %>%
+  arrange(perc) %>%
+  mutate(labels = scales::percent(perc))
+
+ggplot(dfPlat, aes(x="",y=perc, fill=platform)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+```
+## Comparative Study
 <!-- shift focus to from company based to task category based -->
 
 ## Importance Study
