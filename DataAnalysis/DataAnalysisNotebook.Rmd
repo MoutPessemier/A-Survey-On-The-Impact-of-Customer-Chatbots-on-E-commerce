@@ -90,6 +90,11 @@ names(d)[names(d) == "The.chatbot.is.NOT.easy.to.use."] <- "gq5"
 names(d)[names(d) == "At.times.I.didnt.understand.what.the.chatbot.expected.of.me."] <- "gq6"
 ```
 
+We make a vector with all questions in:
+```{r}
+questions1 <- c("Did you have any difficulties using the chatbot?", "The chatbot did not ask the right questions to solve your task?", "The chatbot didn't know what he was talking about?", "Was the chatbot polite?", "Did the chatbot fulfil your task correctly?", "Was the chatbot easy to use?", "Was it a task to interact with the chatbot?", "Did the chatbot need help from a help desk agent to complete your task?", "Did the chatbot contain enough knowledge to help with your problem?", "Did you enjoy interacting with the chatbot?", "Was the chatbot capable of completing the task on its own?", "Did the chatbot ask you relevant questions to gather the information to solve your task?", "Did the chatbot deliver a better quality of service than a human?", "Did the chatbot interact in a respectful way?", "Was the chatbot unable to complete your task?", "The service provided by the human was of better quality?", "Did you feel you could trust the information provided by the chatbot?", "Did the chatbot perform the task as you expected it to?", "Could you solve your problem/question after using the chatbot?")
+```
+
 Now we sort per chatbot provider:
 ```{r}
 telenet <- filter(d, chatbot == "Telenet")
@@ -365,8 +370,174 @@ dfPlat <- d %>%
 
 ggplot(dfPlat, aes(x="",y=perc, fill=platform)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
 ```
+
 ## Comparative Study
-<!-- shift focus to from company based to task category based -->
+```{r}
+FAQ <- filter(d, taskCategory == "FAQ")
+ComplaintsQ <- filter(d, taskCategory == "Complaint")
+SalesQ <- filter(d, taskCategory == "Sales")
+PersonalQ <- filter(d, taskCategory == "Personalised Question")
+```
+
+#### FAQ
+```{r}
+for(i in 1: 19){
+  yes <- table(FAQ[[paste0("q", i)]])["1"]
+  no <- table(FAQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(FAQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+### Sales
+```{r}
+for(i in 1: 19){
+  yes <- table(SalesQ[[paste0("q", i)]])["1"]
+  no <- table(SalesQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(SalesQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+### Complaints
+```{r}
+for(i in 1: 19){
+  yes <- table(ComplaintsQ[[paste0("q", i)]])["1"]
+  no <- table(ComplaintsQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(ComplaintsQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+### Personal questions
+```{r}
+for(i in 1: 19){
+  yes <- table(PersonalQ[[paste0("q", i)]])["1"]
+  no <- table(PersonalQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(PersonalQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
 
 ## Importance Study
 
