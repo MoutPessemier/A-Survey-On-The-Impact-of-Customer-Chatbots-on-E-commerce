@@ -42,6 +42,7 @@ Total: 49:00u
 | Fix interviews with telecom providers              | 2:30u     |
 | Apply feedback 1st semester to literature review   | 4:15u     |
 | Write-out interview T-Mobile                       | 7:00u     |
+| Correct interview T-Mobile                         | 2:30u     |
 
 Total: 39:15
 
