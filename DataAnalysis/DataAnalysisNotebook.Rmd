@@ -116,13 +116,15 @@ barplot(table(telenet$taskCategory),
         main="Frequency of each category in Telenet",
         xlab="Task Category",
         ylab="Count",
-        col="blue")
+        col="blue",
+        ylim = c(0,18))
 
 barplot(table(telenet$language),
         main="Frequency of each language interaction in Telenet",
         xlab="Task Category",
         ylab="Count",
-        col="blue")
+        col="blue",
+        ylim = c(0,18))
 
 barplot(table(telenet$platform),
         main="Frequency of each platform in Telenet",
@@ -151,11 +153,12 @@ meanAgeProximus
 varAgeProximus = sd(proximus$age)
 varAgeProximus
 
-barplot(table(proximus$taskCategory),
+b <- barplot(table(proximus$taskCategory),
         main="Frequency of each category in Proximus",
         xlab="Task Category",
         ylab="Count",
-        col="blue")
+        col="blue",
+        ylim = c(0,10))
 
 barplot(table(proximus$language),
         main="Frequency of each language interaction in Proximus",
@@ -180,7 +183,8 @@ barplot(table(proximus$degree),
         xlab="Task Category",
         ylab="Count",
         cex.names=0.55,
-        col="blue")
+        col="blue",
+        ylim = c(0,10))
 ```
 
 ### T-Mobile
