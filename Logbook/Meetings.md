@@ -25,4 +25,5 @@
 | 05/04/2022    | Mout, Rob                                                 | Discuss some more data analytics                                                                                         | 25 minutes |
 | 06/04/2022    | Mout, Rob, Mr. Etikala                                    | Discuss the survey results and discuss future                                                                            | 1.25 hours |
 | 06/04/2022    | Mout, Rob                                                 | Discuss plan of attack and task division                                                                                 | 1.25 hours |
-| 07/04/2022    | Mout, Rob, Chiara Portolani                               | Interview Telenet   												       | 1.25 hours |
+| 07/04/2022    | Mout, Rob, Chiara Portolani                               | Interview Telenet   												                                                                             | 1.25 hours |
+| 07/04/2022    | Mout, Rob, Justin Wesseling                               | Interview KPN        												                                                                             | 1.25 hours |
