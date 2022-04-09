@@ -21,9 +21,9 @@ The data has been anonimised in Excel. A new column was created called 'taskCate
 - Complaint
 - Sales
 
-From the 48 entries, we had to throw 3 away:
+From the 48 entries, we had to throw 4 away:
 
-- 2 because of the used chatbot: they were no telecom chatbots.
+- 3 because of the used chatbot: they were no telecom chatbots.
 - 1 entry was a duplicate.
 
 Some of the columns were renamed to have an easier time working with the variable names
