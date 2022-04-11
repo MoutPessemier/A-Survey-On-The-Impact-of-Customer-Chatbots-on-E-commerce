@@ -43,6 +43,7 @@ Total: 49:00u
 | Apply feedback 1st semester to literature review   | 4:15u     |
 | Write-out interview T-Mobile                       | 7:00u     |
 | Correct interview T-Mobile                         | 2:00u     |
+| Interview KPN.                                     | 4:00u     |
 
 
 # Laurens
