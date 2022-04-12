@@ -1,11 +1,25 @@
 ---
-title: "Data Analysis"
+title: "Thesis Data Analysis"
 output: html_notebook
 ---
 ## Libraries
 ```{r}
-library(dplyr)
-library(ggplot2)
+if(!require('dplyr')) {
+  install.packages('dplyr')
+  library('dplyr')
+}
+if(!require('ggplot2')) {
+  install.packages('ggplot2')
+  library('ggplot2')
+}
+if(!require('epiDisplay')) {
+  install.packages('epiDisplay')
+  library('epiDisplay')
+}
+if(!require('gmodels')) {
+  install.packages('gmodels')
+  library('gmodels')
+}
 ```
 
 ## Read and prepare data
@@ -88,7 +102,7 @@ names(d)[names(d) == "The.chatbot.is.easy.to.use."] <- "gq2"
 names(d)[names(d) == "The.chatbot.communicates.in.a.robotic...non.empathic.way."] <- "gq3"
 names(d)[names(d) == "The.chatbot.is.available.at.all.times."] <- "gq4"
 names(d)[names(d) == "The.chatbot.is.NOT.easy.to.use."] <- "gq5"
-names(d)[names(d) == "At.times.I.didnt.understand.what.the.chatbot.expected.of.me."] <- "gq6"
+names(d)[names(d) == "The.chatbot.DOES.NOT.communicate.in.a.robotic...non.empathic.way."] <- "gq6"
 ```
 
 We make a vector with all questions in:
@@ -322,6 +336,8 @@ dfDegree <- d %>%
   mutate(labels = scales::percent(perc))
 
 ggplot(dfDegree, aes(x="",y=perc, fill=degree)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+
+tab1(d$degree, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Gender
@@ -335,6 +351,8 @@ dfGender <- d %>%
   mutate(labels = scales::percent(perc))
 
 ggplot(dfGender, aes(x="",y=perc, fill=gender)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+
+tab1(d$gender, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Chatbot
@@ -348,6 +366,7 @@ dfChatbot <- d %>%
   mutate(labels = scales::percent(perc))
 
 ggplot(dfChatbot, aes(x="",y=perc, fill=chatbot)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+tab1(d$chatbot, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Language
@@ -361,6 +380,8 @@ dfLang <- d %>%
   mutate(labels = scales::percent(perc))
 
 ggplot(dfLang, aes(x="",y=perc, fill=language)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+
+tab1(d$language, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Platform
@@ -374,6 +395,8 @@ dfPlat <- d %>%
   mutate(labels = scales::percent(perc))
 
 ggplot(dfPlat, aes(x="",y=perc, fill=platform)) + geom_col() + coord_polar(theta="y") + geom_text(aes(label = labels), position = position_stack(vjust = 0.5))
+
+tab1(d$platform, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 ## Comparative Study
@@ -705,42 +728,305 @@ for(i in 1: 19){
 
 ### KPN
 ```{r}
-for(i in 1: 19){
-  yes <- table(KPN[[paste0("q", i)]])["1"]
-  no <- table(KPN[[paste0("q", i)]])["2"]
-  
-  yes[is.na(yes)] <- 0
-  no[is.na(no)] <- 0
-  
-  ynlabels <- c()
-  ynval <- c()
-  ynpos <- c()
-
-  if(yes > 0 && no > 0) {
-    ynlabels <- c("yes", "no")
-    ynval <- c(yes, no)
-    ynpos <- c(yes+1,no+1)
-  }
-  if ( yes > 0 && no == 0) {
-    ynlabels <- c("yes")
-    ynval <- c(yes)
-    ynpos <- c(yes+1)
-  }
-  if (yes == 0 && no > 0) {
-    ynlabels <- c("no")
-    ynval <- c(no)
-    ynpos <- c(no+1)
-  }
-  
-  b <- barplot(table(KPN[[paste0("q", i)]]),
-          main=questions1[i],
-          ylab="Count",
-          names.arg = ynlabels,
-          col="blue",
-          ylim = c(0,28))
-  abline(v=c(1.3) , col="grey")
-  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
-}
+# for(i in 1: 19){
+#   yes <- table(KPN[[paste0("q", i)]])["1"]
+#   no <- table(KPN[[paste0("q", i)]])["2"]
+#   
+#   yes[is.na(yes)] <- 0
+#   no[is.na(no)] <- 0
+#   
+#   ynlabels <- c()
+#   ynval <- c()
+#   ynpos <- c()
+# 
+#   if(yes > 0 && no > 0) {
+#     ynlabels <- c("yes", "no")
+#     ynval <- c(yes, no)
+#     ynpos <- c(yes+1,no+1)
+#   }
+#   if ( yes > 0 && no == 0) {
+#     ynlabels <- c("yes")
+#     ynval <- c(yes)
+#     ynpos <- c(yes+1)
+#   }
+#   if (yes == 0 && no > 0) {
+#     ynlabels <- c("no")
+#     ynval <- c(no)
+#     ynpos <- c(no+1)
+#   }
+#   
+#   b <- barplot(table(KPN[[paste0("q", i)]]),
+#           main=questions1[i],
+#           ylab="Count",
+#           names.arg = ynlabels,
+#           col="blue",
+#           ylim = c(0,28))
+#   abline(v=c(1.3) , col="grey")
+#   text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+# }
 ```
 ## Importance Study
+```{r}
+scenarioQuestions <- c('The chatbot DOES NOT execute the given task successfully.', 'The chatbot can NOT perform the requested service to the same level as a human agent.','The chatbot knows at least as much as an agent about the requested service.', 'The chatbot executes the given task successfully.', 'The chatbot knows less than an agent about the requested service.', 'The chatbot can perform the requested service to the same level as a human agent.')
+generalQuestions <- c('The chatbot is NOT available at all times.', 'The chatbot is easy to use.', 'The chatbot communicates in a robotic, non-empathic way.','The chatbot is available at all times.', 'The chatbot is NOT easy to use.', 'The chatbot DOES NOT communicate in a robotic, non-empathic way.')
+kano_categories <- c('like', 'must-be','neutral','live-with','dislike')
+df <- data.frame(matrix(ncol = 8, nrow = 0))
+x <- c("attribute", "Q", "M", "A", "I", "P", "R", "label")
+colnames(df) <- x
+attrNames <- c("Execute requested tasks", "Number of services available in the chatbot", "Contains breadth of knowledge", "Available at all times", "Ease of use", "Create an enjoyable interaction")
+```
 
+### Kano Category Table
+
+|              | 1. dislike | 2. live-with | 3. neutral | 4. must-be | 5. like |
+|:------------:|:----------:|:------------:|:----------:|:----------:|:-------:|
+|  1. dislike  |      Q     |       R      |      R     |      R     |    R    |
+| 2. live-with |      M     |       I      |      I     |      I     |    R    |
+|  3. neutral  |      M     |       I      |      I     |      I     |    R    |
+|  4. must-be  |      M     |       I      |      I     |      I     |    R    |
+|    5. like   |      P     |       A      |      A     |      A     |    Q    |
+
+- Q = Questionable = When the user puts in contradictory responses
+- A = Attractive
+- P = Performance
+- M = Must-be
+- I = Indifferent
+- R = Reverse
+
+#### Scenario 1
+```{r}
+for (i in 1: 3) {
+  if(i == 1) {
+    t <- table(factor(d$s1q4, levels = 1:5),factor(d$s1q1, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[4], scenarioQuestions[1])
+  } else if (i == 2) {
+    t <- table(factor(d$s1q6, levels = 1:5),factor(d$s1q2, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[6], scenarioQuestions[2])
+  } else {
+    t <- table(factor(d$s1q3, levels = 1:5),factor(d$s1q5, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[3], scenarioQuestions[5])
+  }
+  colnames(t) <- kano_categories
+  rownames(t) <- kano_categories
+
+  attributeName <- paste0("S", 1, ": ", attrNames[i])
+  Q <- t[1,1] + t[5,5]
+  M <- t[2,1] + t[3,1] + t[4,1]
+  A <- t[5,2] + t[5,3] + t[5,4]
+  I <- t[2,2] + t[2,3] + t[2,4] + t[3,2] + t[3,3] + t[3,4] + t[4,2] + t[4,3] + t[4,4]
+  P <- t[5,1]
+  R <- t[1,2] + t[1,3] + t[1,4] + t[1,5] + t[2,5] + t[3,5] + t[4,5]
+
+  cats <- c(Q, M, A, I, P, R)
+  biggest <- max(cats)
+  biggest
+
+  cat <- ""
+
+  if(biggest == Q) {
+    cat <- "Q"
+  } else if (biggest == M) {
+    cat <- "M"
+  } else if (biggest == A) {
+    cat <- "A"
+  } else if (biggest == I) {
+    cat <- "I"
+  } else if (biggest == P) {
+    cat <- "P"
+  } else {
+    cat <- "R"
+  }
+
+  df[nrow(df) + 1,] = c(attributeName, Q, M, A, I, P, R, cat)
+}
+df
+```
+
+#### Scenario 2
+```{r}
+for (i in 1: 3) {
+  if(i == 1) {
+    t <- table(factor(d$s2q4, levels = 1:5),factor(d$s2q1, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[4], scenarioQuestions[1])
+  } else if (i == 2) {
+    t <- table(factor(d$s2q6, levels = 1:5),factor(d$s2q2, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[6], scenarioQuestions[2])
+  } else {
+    t <- table(factor(d$s2q3, levels = 1:5),factor(d$s2q5, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[3], scenarioQuestions[5])
+  }
+  colnames(t) <- kano_categories
+  rownames(t) <- kano_categories
+
+  attributeName <- paste0("S", 2, ": ", attrNames[i])
+  Q <- t[1,1] + t[5,5]
+  M <- t[2,1] + t[3,1] + t[4,1]
+  A <- t[5,2] + t[5,3] + t[5,4]
+  I <- t[2,2] + t[2,3] + t[2,4] + t[3,2] + t[3,3] + t[3,4] + t[4,2] + t[4,3] + t[4,4]
+  P <- t[5,1]
+  R <- t[1,2] + t[1,3] + t[1,4] + t[1,5] + t[2,5] + t[3,5] + t[4,5]
+
+  cats <- c(Q, M, A, I, P, R)
+  biggest <- max(cats)
+  biggest
+
+  cat <- ""
+
+  if(biggest == Q) {
+    cat <- "Q"
+  } else if (biggest == M) {
+    cat <- "M"
+  } else if (biggest == A) {
+    cat <- "A"
+  } else if (biggest == I) {
+    cat <- "I"
+  } else if (biggest == P) {
+    cat <- "P"
+  } else {
+    cat <- "R"
+  }
+
+  df[nrow(df) + 1,] = c(attributeName, Q, M, A, I, P, R, cat)
+}
+df
+```
+
+#### Scenario 3
+```{r}
+for (i in 1: 3) {
+  if(i == 1) {
+    t <- table(factor(d$s3q4, levels = 1:5),factor(d$s3q1, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[4], scenarioQuestions[1])
+  } else if (i == 2) {
+    t <- table(factor(d$s3q6, levels = 1:5),factor(d$s3q2, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[6], scenarioQuestions[2])
+  } else {
+    t <- table(factor(d$s3q3, levels = 1:5),factor(d$s3q5, levels = 1:5))
+    names(dimnames(t)) <- c(scenarioQuestions[3], scenarioQuestions[5])
+  }
+  colnames(t) <- kano_categories
+  rownames(t) <- kano_categories
+
+  attributeName <- paste0("S", 3, ": ", attrNames[i])
+  Q <- t[1,1] + t[5,5]
+  M <- t[2,1] + t[3,1] + t[4,1]
+  A <- t[5,2] + t[5,3] + t[5,4]
+  I <- t[2,2] + t[2,3] + t[2,4] + t[3,2] + t[3,3] + t[3,4] + t[4,2] + t[4,3] + t[4,4]
+  P <- t[5,1]
+  R <- t[1,2] + t[1,3] + t[1,4] + t[1,5] + t[2,5] + t[3,5] + t[4,5]
+
+  cats <- c(Q, M, A, I, P, R)
+  biggest <- max(cats)
+  biggest
+
+  cat <- ""
+
+  if(biggest == Q) {
+    cat <- "Q"
+  } else if (biggest == M) {
+    cat <- "M"
+  } else if (biggest == A) {
+    cat <- "A"
+  } else if (biggest == I) {
+    cat <- "I"
+  } else if (biggest == P) {
+    cat <- "P"
+  } else {
+    cat <- "R"
+  }
+
+  df[nrow(df) + 1,] = c(attributeName, Q, M, A, I, P, R, cat)
+}
+df
+```
+
+#### General
+```{r}
+for (i in 1: 3) {
+  if(i == 1) {
+    t <- table(factor(d$gq4, levels = 1:5),factor(d$gq1, levels = 1:5))
+    names(dimnames(t)) <- c(generalQuestions[4], generalQuestions[1])
+  } else if(i == 2) {
+    t <- table(factor(d$gq2, levels = 1:5),factor(d$gq5, levels = 1:5))
+    names(dimnames(t)) <- c(generalQuestions[2], generalQuestions[5])
+  } else {
+    t <- table(factor(d$gq3, levels = 1:5),factor(d$gq6, levels = 1:5))
+    names(dimnames(t)) <- c(generalQuestions[3], generalQuestions[6])
+  }
+  colnames(t) <- kano_categories
+  rownames(t) <- kano_categories
+
+  attributeName <- attrNames[i+3]
+  Q <- t[1,1] + t[5,5]
+  M <- t[2,1] + t[3,1] + t[4,1]
+  A <- t[5,2] + t[5,3] + t[5,4]
+  I <- t[2,2] + t[2,3] + t[2,4] + t[3,2] + t[3,3] + t[3,4] + t[4,2] + t[4,3] + t[4,4]
+  P <- t[5,1]
+  R <- t[1,2] + t[1,3] + t[1,4] + t[1,5] + t[2,5] + t[3,5] + t[4,5]
+
+  cats <- c(Q, M, A, I, P, R)
+  biggest <- max(cats)
+  biggest
+
+  cat <- ""
+
+  if(biggest == Q) {
+    cat <- "Q"
+  } else if (biggest == M) {
+    cat <- "M"
+  } else if (biggest == A) {
+    cat <- "A"
+  } else if (biggest == I) {
+    cat <- "I"
+  } else if (biggest == P) {
+    cat <- "P"
+  } else {
+    cat <- "R"
+  }
+
+  df[nrow(df) + 1,] = c(attributeName, Q, M, A, I, P, R, cat)
+}
+df
+```
+### Satisfaction and dissatisfaction coefficient
+```{r}
+satDf <- data.frame(matrix(ncol = 3, nrow = 0))
+x <- c("Attribute", "Satisfaction Coefficient", "Dissatisfaction Coefficient")
+colnames(satDf) <- x
+for (row in 1:nrow(df)) {
+  Q <- strtoi(df[row, "Q"], base = 0L)
+  M <- strtoi(df[row, "M"], base = 0L)
+  A <- strtoi(df[row, "A"], base = 0L)
+  I <- strtoi(df[row, "I"], base = 0L)
+  P <- strtoi(df[row, "P"], base = 0L)
+  R <- strtoi(df[row, "R"], base = 0L)
+
+  satCoef <- round((A+P)/(A+P+M+I), digits = 2)
+  dissatCoef <- round((P+M)/(A+P+M+I)*-1, digits = 2)
+  satDf[nrow(satDf) + 1,] = c(attributeName, satCoef, dissatCoef)
+}
+satDf
+```
+
+### Scatterplot
+```{r}
+satDf$`Satisfaction Coefficient` <- as.numeric(satDf$`Satisfaction Coefficient`)
+satDf$`Dissatisfaction Coefficient` <- as.numeric(satDf$`Dissatisfaction Coefficient`)
+
+ggplot(satDf, aes(x=`Satisfaction Coefficient`, 
+                  y=-`Dissatisfaction Coefficient`)) + 
+  geom_label(x = 0.0, y = 0.55, label = 'Must - be', hjust = 0) +
+  geom_label(x = 0.0, y = 0.45, label = 'Indifferent', hjust = 0) +
+  geom_label(x = 1, y = 0.55, label = 'Performance', hjust = 1) +
+  geom_label(x = 1, y = 0.45, label = 'Attractive', hjust = 1) +
+  geom_point(col = 'deepskyblue3', size = 3) + 
+  geom_text(aes(label = seq(nrow(satDf))), size = 3, nudge_x = -0.015,
+            nudge_y = -0.02, check_overlap = TRUE) +
+  theme_light() +
+  theme(panel.grid = element_blank()) +
+  geom_hline(yintercept = 0.5) +
+  geom_vline(xintercept = 0.5) +
+  scale_y_continuous(labels = function(x) paste0('-', x),
+                     limits = c(0, 1)) +
+  xlim(c(0, 1))
+```
