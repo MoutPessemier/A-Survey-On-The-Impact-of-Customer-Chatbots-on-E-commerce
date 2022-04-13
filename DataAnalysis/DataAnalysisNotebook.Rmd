@@ -1022,6 +1022,8 @@ ggplot(satDf, aes(x=`Satisfaction Coefficient`,
   geom_point(col = 'deepskyblue3', size = 3) + 
   geom_text(aes(label = seq(nrow(satDf))), size = 3, nudge_x = -0.015,
             nudge_y = -0.02, check_overlap = TRUE) +
+  geom_text(aes(label = 11), size = 3, nudge_x = -0.015,
+                nudge_y = 0.02, data = satDf[11,]) +
   theme_light() +
   theme(panel.grid = element_blank()) +
   geom_hline(yintercept = 0.5) +
