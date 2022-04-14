@@ -30,47 +30,26 @@
 
 # Rob
 | Task                                               | Time      |
-| -------------------------------------------------- | --------- |
-| Read + mark in papers                              | 10:00u    |
-| Summarise papers                                   | 1:30u     |
-| Write Literature Draft                             | 4:00u     |
-| Write Methodology Draft                            | 2:00u     |                      
-| Work out structure and direction for methodology   | 1:00u     |
-| Limit scope and specify RQ's and survey            | 4:00u     |
-| File fusion into one file: literature study        | 2:00u     |
-| Contact with enterprises                           | 1:30u     |
-| Interview questions                                | 1:15u     |
-| Rewrite Laurens' part (add telecom part)           | 3:00u     |
-| Applied feedback interview questions               | 2:00u     |
-| Fix + launch survey                                | 30min     |
-| Fix interviews with telecom providers              | 2:30u     |
-| Apply feedback 1st semester to literature review   | 4:15u     |
-| Write-out interview T-Mobile                       | 7:00u     |
-| Correct interview T-Mobile                         | 2:00u     |
-| Write-out Interview KPN.                           | 4:00u     |
-| Write-out introduction + abstract.                 | 2:00u     |
+| ---------------------------------------------------- | --------- |
+| Read + mark in papers                                | 10:00u    |
+| Summarise papers                                     | 1:30u     |
+| Write Literature Draft                               | 4:00u     |
+| Write Methodology Draft                              | 2:00u     |                      
+| Work out structure and direction for methodology     | 1:00u     |
+| Limit scope and specify RQ's and survey              | 4:00u     |
+| File fusion into one file: literature study          | 2:00u     |
+| Contact with enterprises                             | 1:30u     |
+| Interview questions                                  | 1:15u     |
+| Rewrite Laurens' part (add telecom part)             | 3:00u     |
+| Applied feedback interview questions                 | 2:00u     |
+| Fix + launch survey                                  | 30min     |
+| Fix interviews with telecom providers                | 2:30u     |
+| Apply feedback 1st semester to literature review     | 4:15u     |
+| Write-out interview T-Mobile                         | 7:00u     |
+| Correct interview T-Mobile                           | 2:00u     |
+| Write-out Interview KPN.                             | 4:00u     |
+| Write-out introduction + abstract.                   | 2:00u     |
 | Personally contacting dutch people to fill in survey | 1:30u     |
-
-
-| Task                                             | Time   |
-| ------------------------------------------------ | ------ |
-| Read + mark in papers                            | 10:00u |
-| Summarise papers                                 | 1:30u  |
-| Write Literature Draft                           | 4:00u  |
-| Write Methodology Draft                          | 2:00u  |
-| Work out structure and direction for methodology | 1:00u  |
-| Limit scope and specify RQ's and survey          | 4:00u  |
-| File fusion into one file: literature study      | 2:00u  |
-| Contact with enterprises                         | 1:30u  |
-| Interview questions                              | 1:15u  |
-| Rewrite Laurens' part (add telecom part)         | 3:00u  |
-| Applied feedback interview questions             | 2:00u  |
-| Fix + launch survey                              | 30min  |
-| Fix interviews with telecom providers            | 2:30u  |
-| Apply feedback 1st semester to literature review | 4:15u  |
-| Write-out interview T-Mobile                     | 7:00u  |
-| Correct interview T-Mobile                       | 2:00u  |
-| Interview KPN.                                   | 4:00u  |
 
 # Laurens
 
