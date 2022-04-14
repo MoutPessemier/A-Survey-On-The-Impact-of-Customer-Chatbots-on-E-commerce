@@ -48,6 +48,8 @@ Total: 49:00u
 | Correct interview T-Mobile                         | 2:00u     |
 | Write-out Interview KPN.                           | 4:00u     |
 | Write-out introduction + abstract.                 | 2:00u     |
+| Personally contacting dutch people to fill in survey | 1:30u     |
+
 
 
 # Laurens
