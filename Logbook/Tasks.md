@@ -27,6 +27,7 @@
 | Put Telenet interview in Latex                     | 35min  |
 | Kano data analysis & research                      | 6:25u  |
 | Optimse script + add new entries                   | 45min  |
+| Proof read new parts written by Rob                | 35min  |
 
 # Rob
 | Task                                               | Time      |
