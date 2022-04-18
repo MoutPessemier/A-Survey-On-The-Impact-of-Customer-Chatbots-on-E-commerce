@@ -1378,6 +1378,10 @@ df
 
 ### Satisfaction and dissatisfaction coefficient
 
+Satisfaction coefficient: $A+P/A+P+M+I$
+
+Dissatisfaction coefficient: $P+M/A+P+M+I$
+
 ```{r}
 satDf <- data.frame(matrix(ncol = 3, nrow = 0))
 x <- c("Attribute", "Satisfaction Coefficient", "Dissatisfaction Coefficient")
