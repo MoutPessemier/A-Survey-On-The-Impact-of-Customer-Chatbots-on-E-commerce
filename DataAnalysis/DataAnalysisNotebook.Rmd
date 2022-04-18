@@ -1,8 +1,12 @@
 ---
 title: "Thesis Data Analysis"
-output: html_notebook
+output:
+  html_notebook: default
+  pdf_document: default
 ---
+
 ## Libraries
+
 ```{r}
 if(!require('dplyr')) {
   install.packages('dplyr')
@@ -23,6 +27,7 @@ if(!require('gmodels')) {
 ```
 
 ## Read and prepare data
+
 ```{r}
 # If you want to run our file, you only have to change this path to the correct path on your local machine.
 d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Customer-Chatbots-on-E-commerce/DataAnalysis/data.csv", sep=",")
@@ -30,18 +35,19 @@ d <- read.csv("/Users/moutpessemier/Desktop/MT/A-Survey-On-The-Impact-of-Custome
 
 The data has been anonimised in Excel. A new column was created called 'taskCategory'. The tasks performed are categorised in one of the following 4 categories:
 
-- FAQ
-- Personalised question
-- Complaint
-- Sales
+-   FAQ
+-   Personalised question
+-   Complaint
+-   Sales
 
 From the 63 entries, we had to throw 5 away:
 
-- 3 because of the used chatbot: they were no telecom chatbots.
-- 1 entry was a duplicate.
-- 1 entry responded with one answer only (only yes and only neutral in part 2)
+-   3 because of the used chatbot: they were no telecom chatbots.
+-   1 entry was a duplicate.
+-   1 entry responded with one answer only (only yes and only neutral in part 2)
 
 Some of the columns were renamed to have an easier time working with the variable names
+
 ```{r}
 names(d)[names(d) == "How.old.are.you."] <- "age"
 names(d)[names(d) == "What.is.the.highest.degree.you.currently.have."] <- "degree"
@@ -106,11 +112,13 @@ names(d)[names(d) == "The.chatbot.DOES.NOT.communicate.in.a.robotic...non.empath
 ```
 
 We make a vector with all questions in:
+
 ```{r}
 questions1 <- c("Did you have any difficulties using the chatbot?", "The chatbot did not ask the right questions to solve your task?", "The chatbot didn't know what he was talking about?", "Was the chatbot polite?", "Did the chatbot fulfil your task correctly?", "Was the chatbot easy to use?", "Was it a task to interact with the chatbot?", "Did the chatbot need help from a help desk agent to complete your task?", "Did the chatbot contain enough knowledge to help with your problem?", "Did you enjoy interacting with the chatbot?", "Was the chatbot capable of completing the task on its own?", "Did the chatbot ask you relevant questions to gather the information to solve your task?", "Did the chatbot deliver a better quality of service than a human?", "Did the chatbot interact in a respectful way?", "Was the chatbot unable to complete your task?", "The service provided by the human was of better quality?", "Did you feel you could trust the information provided by the chatbot?", "Did the chatbot perform the task as you expected it to?", "Could you solve your problem/question after using the chatbot?")
 ```
 
 Now we sort per chatbot provider:
+
 ```{r}
 telenet <- filter(d, chatbot == "Telenet")
 proximus <- filter(d, chatbot == "Proximus")
@@ -120,7 +128,9 @@ KPN <- filter(d, chatbot == "KPN")
 ```
 
 ## Data Exploration
+
 ### Telenet
+
 ```{r}
 meanAgeTelenet = mean(telenet$age)
 meanAgeTelenet
@@ -162,6 +172,7 @@ barplot(table(telenet$degree),
 ```
 
 ### Proximus
+
 ```{r}
 meanAgeProximus = mean(proximus$age)
 meanAgeProximus
@@ -203,6 +214,7 @@ barplot(table(proximus$degree),
 ```
 
 ### T-Mobile
+
 ```{r}
 meanAgeTmobile = mean(tMobile$age)
 meanAgeTmobile
@@ -242,6 +254,7 @@ barplot(table(tMobile$degree),
 ```
 
 ### Orange
+
 ```{r}
 meanAgeOrange = mean(orange$age)
 meanAgeOrange
@@ -281,6 +294,7 @@ barplot(table(orange$degree),
 ```
 
 ### KPN
+
 ```{r}
 meanAgeKPN = mean(KPN$age)
 meanAgeKPN
@@ -320,7 +334,9 @@ barplot(table(KPN$degree),
 ```
 
 ### Environment variables
+
 #### Age
+
 ```{r}
 ggplot(d, aes(x=chatbot, y=age)) + geom_point(colour="black", size=1) + stat_summary(fun=mean, geom="point", shape=1, size=2, colour="red", fill="red") + ggtitle("Age per chatbot provider")
 tab1(d$age, sort.group = "decreasing", cum.percent = FALSE)
@@ -329,6 +345,7 @@ sd(d$age)
 ```
 
 #### Degree
+
 ```{r}
 dfDegree <- d %>%
   group_by(degree) %>%
@@ -344,6 +361,7 @@ tab1(d$degree, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Gender
+
 ```{r}
 dfGender <- d %>%
   group_by(gender) %>%
@@ -359,6 +377,7 @@ tab1(d$gender, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Chatbot
+
 ```{r}
 dfChatbot <- d %>%
   group_by(chatbot) %>%
@@ -373,6 +392,7 @@ tab1(d$chatbot, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Language
+
 ```{r}
 dfLang <- d %>%
   group_by(language) %>%
@@ -388,6 +408,7 @@ tab1(d$language, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 #### Platform
+
 ```{r}
 dfPlat <- d %>%
   group_by(platform) %>%
@@ -403,6 +424,7 @@ tab1(d$platform, sort.group = "decreasing", cum.percent = FALSE)
 ```
 
 ## Comparative Study
+
 ```{r}
 FAQ <- filter(d, taskCategory == "FAQ")
 ComplaintsQ <- filter(d, taskCategory == "Complaint")
@@ -411,6 +433,7 @@ PersonalQ <- filter(d, taskCategory == "Personalised Question")
 ```
 
 #### FAQ
+
 ```{r}
 for(i in 1: 19){
   yes <- table(FAQ[[paste0("q", i)]])["1"]
@@ -451,6 +474,7 @@ for(i in 1: 19){
 ```
 
 ### Sales
+
 ```{r}
 for(i in 1: 19){
   yes <- table(SalesQ[[paste0("q", i)]])["1"]
@@ -491,6 +515,7 @@ for(i in 1: 19){
 ```
 
 ### Complaints
+
 ```{r}
 for(i in 1: 19){
   yes <- table(ComplaintsQ[[paste0("q", i)]])["1"]
@@ -531,6 +556,7 @@ for(i in 1: 19){
 ```
 
 ### Personal questions
+
 ```{r}
 for(i in 1: 19){
   yes <- table(PersonalQ[[paste0("q", i)]])["1"]
@@ -569,7 +595,9 @@ for(i in 1: 19){
   text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
 }
 ```
+
 ### Telenet
+
 ```{r}
 for(i in 1: 19){
   yes <- table(telenet[[paste0("q", i)]])["1"]
@@ -610,6 +638,7 @@ for(i in 1: 19){
 ```
 
 ### Proximus
+
 ```{r}
 for(i in 1: 19){
   yes <- table(proximus[[paste0("q", i)]])["1"]
@@ -650,6 +679,7 @@ for(i in 1: 19){
 ```
 
 ### T-Mobile
+
 ```{r}
 for(i in 1: 19){
   yes <- table(tMobile[[paste0("q", i)]])["1"]
@@ -690,6 +720,7 @@ for(i in 1: 19){
 ```
 
 ### Orange
+
 ```{r}
 for(i in 1: 19){
   yes <- table(orange[[paste0("q", i)]])["1"]
@@ -730,6 +761,7 @@ for(i in 1: 19){
 ```
 
 ### KPN
+
 ```{r}
 for(i in 1: 19){
   yes <- table(KPN[[paste0("q", i)]])["1"]
@@ -768,7 +800,355 @@ for(i in 1: 19){
   text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
 }
 ```
+
+### Categories For Telenet
+
+```{r}
+TFAQ <- filter(telenet, taskCategory == "FAQ")
+TComplaintsQ <- filter(telenet, taskCategory == "Complaint")
+TSalesQ <- filter(telenet, taskCategory == "Sales")
+TPersonalQ <- filter(telenet, taskCategory == "Personalised Question")
+```
+
+#### FAQ
+
+```{r}
+for(i in 1: 19){
+  yes <- table(TFAQ[[paste0("q", i)]])["1"]
+  no <- table(TFAQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(TFAQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Complaints
+
+```{r}
+for(i in 1: 19){
+  yes <- table(TComplaintsQ[[paste0("q", i)]])["1"]
+  no <- table(TComplaintsQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(TComplaintsQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Sales
+
+```{r}
+for(i in 1: 19){
+  yes <- table(TSalesQ[[paste0("q", i)]])["1"]
+  no <- table(TSalesQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(TSalesQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Personal Questions
+
+```{r}
+for(i in 1: 19){
+  yes <- table(TPersonalQ[[paste0("q", i)]])["1"]
+  no <- table(TPersonalQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(TPersonalQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+### Categories For Proximus
+
+```{r}
+PFAQ <- filter(proximus, taskCategory == "FAQ")
+PComplaintsQ <- filter(proximus, taskCategory == "Complaint")
+PSalesQ <- filter(proximus, taskCategory == "Sales")
+PPersonalQ <- filter(proximus, taskCategory == "Personalised Question")
+```
+
+#### FAQ
+
+```{r}
+for(i in 1: 19){
+  yes <- table(PFAQ[[paste0("q", i)]])["1"]
+  no <- table(PFAQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(PFAQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Complaints
+
+```{r}
+for(i in 1: 19){
+  yes <- table(PComplaintsQ[[paste0("q", i)]])["1"]
+  no <- table(PComplaintsQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(PComplaintsQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Sales
+
+```{r}
+for(i in 1: 19){
+  yes <- table(PSalesQ[[paste0("q", i)]])["1"]
+  no <- table(PSalesQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(PSalesQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
+#### Personal Questions
+
+```{r}
+for(i in 1: 19){
+  yes <- table(PPersonalQ[[paste0("q", i)]])["1"]
+  no <- table(PPersonalQ[[paste0("q", i)]])["2"]
+  
+  yes[is.na(yes)] <- 0
+  no[is.na(no)] <- 0
+  
+  ynlabels <- c()
+  ynval <- c()
+  ynpos <- c()
+
+  if(yes > 0 && no > 0) {
+    ynlabels <- c("yes", "no")
+    ynval <- c(yes, no)
+    ynpos <- c(yes+1,no+1)
+  }
+  if ( yes > 0 && no == 0) {
+    ynlabels <- c("yes")
+    ynval <- c(yes)
+    ynpos <- c(yes+1)
+  }
+  if (yes == 0 && no > 0) {
+    ynlabels <- c("no")
+    ynval <- c(no)
+    ynpos <- c(no+1)
+  }
+  
+  b <- barplot(table(PPersonalQ[[paste0("q", i)]]),
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynlabels,
+          col="blue",
+          ylim = c(0,28))
+  abline(v=c(1.3) , col="grey")
+  text(b, y=ynpos, paste("n: ", ynval , sep=""), cex=1, col = "red")
+}
+```
+
 ## Importance Study
+
 ```{r}
 scenarioQuestions <- c('The chatbot DOES NOT execute the given task successfully.', 'The chatbot can NOT perform the requested service to the same level as a human agent.','The chatbot knows at least as much as an agent about the requested service.', 'The chatbot executes the given task successfully.', 'The chatbot knows less than an agent about the requested service.', 'The chatbot can perform the requested service to the same level as a human agent.')
 generalQuestions <- c('The chatbot is NOT available at all times.', 'The chatbot is easy to use.', 'The chatbot communicates in a robotic, non-empathic way.','The chatbot is available at all times.', 'The chatbot is NOT easy to use.', 'The chatbot DOES NOT communicate in a robotic, non-empathic way.')
@@ -781,22 +1161,23 @@ attrNames <- c("Execute requested tasks", "Number of services available in the c
 
 ### Kano Category Table
 
-|              | 1. dislike | 2. live-with | 3. neutral | 4. must-be | 5. like |
-|:------------:|:----------:|:------------:|:----------:|:----------:|:-------:|
-|  1. dislike  |      Q     |       R      |      R     |      R     |    R    |
-| 2. live-with |      M     |       I      |      I     |      I     |    R    |
-|  3. neutral  |      M     |       I      |      I     |      I     |    R    |
-|  4. must-be  |      M     |       I      |      I     |      I     |    R    |
-|    5. like   |      P     |       A      |      A     |      A     |    Q    |
+|                  | 1\. dislike | 2\. live-with | 3\. neutral | 4\. must-be | 5\. like |
+|:----------------:|:-----------:|:-------------:|:-----------:|:-----------:|:--------:|
+|  **1. dislike**  |      Q      |       R       |      R      |      R      |    R     |
+| **2. live-with** |      M      |       I       |      I      |      I      |    R     |
+|  **3. neutral**  |      M      |       I       |      I      |      I      |    R     |
+|  **4. must-be**  |      M      |       I       |      I      |      I      |    R     |
+|   **5. like**    |      P      |       A       |      A      |      A      |    Q     |
 
-- Q = Questionable = When the user puts in contradictory responses
-- A = Attractive
-- P = Performance
-- M = Must-be
-- I = Indifferent
-- R = Reverse
+-   Q = Questionable = When the user puts in contradictory responses
+-   A = Attractive
+-   P = Performance
+-   M = Must-be
+-   I = Indifferent
+-   R = Reverse
 
 #### Scenario 1
+
 ```{r}
 for (i in 1: 3) {
   if(i == 1) {
@@ -846,6 +1227,7 @@ df
 ```
 
 #### Scenario 2
+
 ```{r}
 for (i in 1: 3) {
   if(i == 1) {
@@ -895,6 +1277,7 @@ df
 ```
 
 #### Scenario 3
+
 ```{r}
 for (i in 1: 3) {
   if(i == 1) {
@@ -944,6 +1327,7 @@ df
 ```
 
 #### General
+
 ```{r}
 for (i in 1: 3) {
   if(i == 1) {
@@ -991,7 +1375,9 @@ for (i in 1: 3) {
 }
 df
 ```
+
 ### Satisfaction and dissatisfaction coefficient
+
 ```{r}
 satDf <- data.frame(matrix(ncol = 3, nrow = 0))
 x <- c("Attribute", "Satisfaction Coefficient", "Dissatisfaction Coefficient")
@@ -1013,6 +1399,7 @@ satDf
 ```
 
 ### Scatterplot
+
 ```{r}
 satDf$`Satisfaction Coefficient` <- as.numeric(satDf$`Satisfaction Coefficient`)
 satDf$`Dissatisfaction Coefficient` <- as.numeric(satDf$`Dissatisfaction Coefficient`)
