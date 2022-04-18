@@ -52,6 +52,8 @@
 | Write-out introduction + abstract.                   | 2:00u     |
 | Personally contacting dutch people to fill in survey | 1:45u     |
 | Translate interview KPN + added to appendices        | 1:40u     |
+| Rework methodology (interviews & survey part, ...)   | 2:30u     |
+
 
 # Laurens
 
