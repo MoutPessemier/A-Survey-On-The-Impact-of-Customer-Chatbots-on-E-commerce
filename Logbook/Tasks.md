@@ -51,8 +51,9 @@
 | Write-out Interview KPN.                             | 4:00u     |
 | Write-out introduction + abstract.                   | 2:00u     |
 | Personally contacting dutch people to fill in survey | 1:45u     |
-| Translate interview KPN + added to appendices        | 1:40u     |
+| Translate interview KPN + added to appendices        | 1:20u     |
 | Rework methodology (interviews & survey part, ...)   | 2:30u     |
+| Translate interview T-Mobile + added to appendices   | 1:45u     |
 
 
 # Laurens
