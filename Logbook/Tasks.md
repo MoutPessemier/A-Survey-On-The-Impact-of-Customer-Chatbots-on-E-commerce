@@ -55,6 +55,7 @@
 | Translate interview KPN + added to appendices        | 1:20u     |
 | Rework methodology (interviews & survey part, ...)   | 2:30u     |
 | Translate interview T-Mobile + added to appendices   | 1:45u     |
+| Review rmd-script + review result                    | 35min     |
 
 
 # Laurens
