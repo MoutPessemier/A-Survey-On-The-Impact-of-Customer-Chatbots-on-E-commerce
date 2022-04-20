@@ -28,7 +28,7 @@
 | Kano data analysis & research                      | 6:25u  |
 | Optimse script + add new entries                   | 45min  |
 | Proof read new parts written by Rob                | 35min  |
-| Write research                                     | 5:45u  |
+| Write research                                     | 8:00u  |
 
 # Rob
 | Task                                               | Time      |
