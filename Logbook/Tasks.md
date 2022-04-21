@@ -29,9 +29,11 @@
 | Optimse script + add new entries                   | 45min  |
 | Proof read new parts written by Rob                | 35min  |
 | Write research                                     | 8:00u  |
+| Write discussion                                   | 50min  |
+| Add survey to appendices                           | 25min  |
 
 # Rob
-| Task                                               | Time      |
+| Task                                                 | Time      |
 | ---------------------------------------------------- | --------- |
 | Read + mark in papers                                | 10:00u    |
 | Summarise papers                                     | 1:30u     |
