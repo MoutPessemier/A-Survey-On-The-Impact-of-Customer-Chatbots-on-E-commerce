@@ -5,6 +5,7 @@
 	
 	\section{Interview with Proximus}
 	\label{in:Proximus}
+	Interviewed person : Sandrine d'Oreye (Product Owner for Voice\&Chatbots | Conversations (Content, Design, Configuration \& NLP) | Chatbot Strategist \& Analyst | Conversational Design
 	\subsection{The current state of the customer service chatbot.}
 	\subsubsection{For what purposes is the conversational agent mainly used? Is it for \acrshort{faq}, to assist the help desk, deal with complaints, helping with sales or other functionalities?}
 	At Proximus it was designed for support questions for residential people. That means you, me, your family, …. It’s not developed for small businesses. The goal is to help the small customers who can’t find an answer on the \acrshort{faq} pages or help centre. It also offers a new way to get requests solved in a new, innovative, fast and personalised way. That is really the first goal. Then we saw that people were also using this to ask questions about specific products or specific subscriptions. So, at some point we also had to include more sales topics. Today we really have support and sales. Our goal is to go towards the next best action, promotion, etc. But that is for the future. It’s mainly used for support.
@@ -130,13 +131,169 @@
 	
 	\section{Interview with T-Mobile and Tele2}
 	\label{in:T-Mobile}
+	Interviewed people:
+	\begin{itemize}
+		\item Nike Van Heeswijk (AI trainer)
+		\item Laura Overwijk (Senior E-service manager)
+		\item Wisse Smit (Data Scientist at ATOS, but works on the chatbot of T-Mobile/Tele2
+	\end{itemize}
 	\subsection{The current state of the customer service chatbot.}
+	\subsubsection{For what purposes is the chatbot mainly used? Is it rather for FAQ, is it
+		also for complaints, to sell something or are there other examples for which
+		the bot can be used?}
+	Wisse: The chatbot is used mainly to achieve self-service. Ultimately, from a business perspective, you want as many things as possible to be handled automatically rather than by a real agent. We also sell some things, there are a lot of services that you can buy directly from the chatbot. If you want to buy add-ons, video services, Deezer, you can. Together with sales, we also put a choice aid in the chatbot, if you want a phone, then together with the chatbot you go through the assortment, so that you are linked to the right phone/subscription. If you then end up with an agent, you know that the device/subscription is a perfect match for you. Again, we want to avoid the intervention of an agent as much as possible because these are relatively easy questions to go through. So it's two parts, the flexi/self service and the sales.
+	
+	\subsubsection{Are complaints also included in the services offered?}
+	Wisse: It is a bit of a question of what you mean by complaints. If you say to the chatbot, look, I have a complaint, then you enter a complaint flow and there is an intent for that. An intent is a dialogue, for each type of complaint you can create an intent, which can then be, for example, an \acrshort{faq} item, and from there you can link several follow-up questions. At T-mobile, the first question asked is whether the customer has already spoken to an employee about the complaint. If this has not happened yet, we want to connect that person to an employee as soon as possible because that person can prevent the complaint from happening again. If they have already spoken to an employee, then that customer is told what they can do to file a formal complaint, the official way is to send a registered letter to the T-mobile head office. In that sense you try to send the customer to the right place with his/her complaint.\\
+	\break
+	Wisse: If someone sends a letter to the head office out of the blue, they will ask again whether the customer has already spoken to an employee about it, which they can then also automate because you know that is the standard way of dealing with a complaint to a human agent.\\
+	\break
+	Nike: We also have intents for various problems (not formal complaints) if you consider that a complaint, for example "I have a problem with the Internet" or "I can't access the Internet". We have a lot of these complaints, for which we also have customer service employees who have to go through the standard steps. If you can also automate this by using a chatbot, and then keep those trivial questions away from the staff, then that also makes a difference in terms of euros. But in terms of official complaints, it is like the way we just discussed.\\
+	\break
+	Laura: If I could add to that a little bit to zoom it out, the chatbot is one of the channels we use for that. You also have website content, where we try to achieve as much self-service as possible.
+	
+	\subsubsection{What platform can you use to communicate with your chatbot?}
+	Laura: We have 2 options for our customer, which are web and app and that is the app of Tele2 and T-Mobile. When we talk about this chatbot solution and also the website of Tele2 and T-Mobile, it's both "home" and "mobile" because of course we have different products towards our customer. The "fixed product" (="home") and "mobile" are both supported on web and app.\\
+	\break
+	Wisse: The app is basically only for "mobile", but we see that a lot of customers who have both T-Mobile "home" and T-Mobile "mobile", have a question about their "home" product and then go to the app because they actually assume that yes, it is T-Mobile so I should also be able to ask it about my fixed connection. Of course you always come to the app with a mobile background (= customer uses mobile phone) where we serve mobile content. Only when we recognise that you have a question about "home", you are asked a control question of "I see that you may have a question about "home"", and we let you know that. You will then get the answer for "home". If you ask the app "Gosh my wifi is not working", we will first ask that control question to make sure you have a question about those "home" products, and then you will be redirected to the fixed chat or actually "home" chatbot. We see that a lot of customers actually find it difficult to make that distinction since it's all called T-Mobile and they do run into that.\\
+	
+	\subsubsection{There was something mentioned about 2 chatbots (T-Mobile and Tele2), is it really about 2 separate chatbots or 1 chatbot that can be divided into 2 parts?}
+	Wisse: It is one shared backend, so we have built one platform and both the T-Mobile chatbot and the Tele2 chatbot run on it, but within those two different brands we also have a distinction in the products we offer. It's all managed in one \acrfull{cms}, because that's a lot clearer. However, it is true that there is also specific content for "home" and for "mobile". You have to think, I have extra costs on my invoice, then you need to click on "home" and that is a different answer than on "mobile". Because yes, the \acrshort{url} is different where you go, because it is not one website, but you have for example "https://T-Mobile/thuis". We have solved that with a number of parameters that we can use. This is also meant for the content people so that they also know how to use them, for example, in a dialogue to make that split (between "mobile" and "home"), so that you as a "home" user get a different intention or different content than someone who comes in with "mobile".\\
+	\break
+	Wisse: It is also from a maintenance point of view, of course, because you would rather maintain one platform with some parameters than have four different platforms for all the different brand-product combinations, which requires a lot more.
+	
+	\subsubsection{In which languages can the chatbot be used?}
+	That's a very good question, we only maintain the Dutch chatbot for T-Mobile Netherlands. There are certainly other chatbots in other countries. T-Mobile is a worldwide brand, but there are different locations which have their own sub-brand. T-Mobile Netherlands carries the name, but it is certainly not a worldwide organisation. This chatbot is running in the Netherlands, and as far as other languages are concerned, we recognise them through an API. What we then do is if we recognise that it is Dutch, then of course we give you the answer. If we feel that this is another language, for example someone talks to us in Polish or English, then in principle that person will receive an answer in the form of "Hi, this is an automated Dutch chat, do you want to speak to a customer agent?". In that sense, we have now made the choice to basically just let all the foreign traffic go directly to the agents. In the future, this could be done by means of, for example, a translate API. It depends on what Laura wants, if in a month Laura would like to be able to help English customers as well, then things should be possible by means of a translate API. There is also a good case to be made for that, because we have enough English traffic coming in.
+	
+	\subsubsection{Do you have an idea of what age groups comprise the majority of users? Is
+		it 20 or younger, between 21 and 40, between 41 and 60 or 60+?}
+	Laura: I can't answer this question properly because I don't know if this analysis has been done before. 
+	Wisse: I do have an answer to it, but it's probably not a very satisfactory one. In the chatbot, we don't have a direct view on how old our users are. For some of the customers we do see who they are, but not for everyone what their age is. We are available through the app, however, and so we can see from the app analyses that, for example, Tele2 users are generally younger than T-Mobile users. There is also another shift in the moment that the chatbot is used the most, for Tele2 the peak is more in the evening around 8pm, while for T-Mobile it's more towards 5-6pm. It's quite funny to see that, because there really is a difference in the traffic when it's usually busy. I can't tell you exactly 60\% of the users are between 20 and 40 of that many, but I can tell you that Tele2 users are younger, which of course fits the brand and also what the brand wants to radiate, I'm sure. There is also a difference in the chat style of the chatbot, so if you would talk to our conversation designer, you will see that the texts are also written differently for T-Mobile than for Tele2. A younger way of language is used for Tele2, you shouldn't think of "yo-yo", but something smoother and maybe more use of some hashtags and more use of emoji's. At T-Mobile it's a bit more businesslike in that respect, because we are also dealing with a slightly older, well, target group there.\\
+	\subsubsection{The chatbot must of course be able to answer different types of questions.
+		Do you have an idea about what kind of questions the chatbot can answer?
+		Yes-no questions, open questions, vague questions, ...}
+	Nike: I think it is very broad, so it can be yes/no questions, but also complicated questions. If the question that is asked sufficiently matches the examples that the chatbot has been trained with and if the data is good enough, then it can be recognised. Whether the answer is complicated or not is another question. There are also answers possible with which you work with integration, so for example if a customer is logged in, then he can be served his puk code immediately if he asks for it.\\
+	\break
+	Wisse: I think that the yes/no questions have been answered, but indeed, what Nike also says, it depends on the training data that you put through the model. Here we work with a kind of category overview and within those categories you just take the sub-questions again. For example, if you have used the word "abroad", then we can recognise "what does it cost to call abroad", but also "what does it cost to call abroad" or "what does it cost to get money abroad". It's all very small distinctions between those different questions, but they have a huge impact on the content you serve. If you ask what it costs to call to Afghanistan, then of course you don't want to know what the tariffs are in Afghanistan, but you want to know what the costs are to call from the Netherlands or in your case from Belgium to Afghanistan. Well, that's one thing. So that distinction depends mainly on Nike (AI trainer), and to what extent they are going to continue in that and distil it down to break it down perfectly. What we also do in terms of further recognition, for example, is slot filling. Within the chatbot world, that's basically just the following, if you order a pizza, for example, you want to know, "do you want cheese on it", "what kind of meat and vegetables do you want on it". These are all slots that you have to fill. Another example is when we're talking about foreign countries, for example, when you simply say, "I'm going to Japan, what does it cost to make a phone call there?"  We then recognise that you apparently want to know what it costs to make a call in Japan or in a certain country, so then you arrive at that intent, and a piece of integration starts to do its work. The integration will look if it can fill a slot, a slot on what we want to fill is the country where the person is going to go. We then look to see: yes, do we see a country here that we can recognise and that we have information about? We see Japan, then we retrieve data from the backend with regard to calling in Japan and the Internet and I don't know what else. We then formulate an answer according to the customer's situation. The same applies, for example, if someone wants to request a payment plan, we check whether there is still an amount outstanding, because there is a limit. If you do not exceed a certain amount, you may no longer apply for a payment scheme. So if you say, "I am € 10 behind on my payments, can I get a payment plan?", then you end up in the intent of "payment plan". We then throw that logic over it and we see if we can fill our slot, then we see for example that we are under € 50, and we say yes, "Unfortunately you cannot request a payment plan, but so and so we can arrange it for you". One time, you give recognition an extra push by being able to recognise very specific information within a certain group, which also allows you to match the answers better to what your customer actually needs for information.\\
+	\break
+	Nike: If there is such a crucial piece of data missing, for example someone says, "I'm going abroad", then you can also fill the slot by asking which country, then we really try to ask this literally.\\
+	\break
+	Wisse: If the chatbot then still doesn't know, it will eventually just get a piece of generic text about: "On this page you can find out what calling abroad costs, and how you can find out more about your country". That's the same with a chatbot, you have to deal with all these different scenarios, so that's where we come in (developers of the chatbot).
+	
 	\subsection{The benefits that the chatbot brings to T-Mobile/Tele2.}
+	\subsubsection{What kind of services can the chatbot primarily provide? For example,
+		being able to buy or stop a subscription, request an invoice, provide someone
+		with their Personal Identification Nuber (PIN) or Personal Unblocking Key
+		(PUK) code, etc.}
+	Wisse: Of course you can solve a whole number of FAQ items. We can go through a whole number of troubleshooting guides. We can retrieve information about the customer, such as customer number, puk code and what is included in the customer contract, for example the start date of the contract. We have about 60 integrations. We can adjust settings within the chatbot; for example, if you've called a service number and you incur extra costs, then you can adjust these in the chatbot so that you don't want to do that again. You can buy services in the chatbot, there's always been a conscious choice to only do add-ons. We're not going to handle the whole contract in there, because that's also a choice that was made by sales because they'd rather speak to the people themselves instead of having it all automated in connection with the drafting, et cetera. We can serve rates based on the country. We can give handovers to employees, which is very important. The chatbot also determines to what extent handovers are facilitated. For T-Mobile's workforce management, Lotte/the chatbot actually plays the role of a kind of gatekeeper. The chatbot makes sure that there are never 100 people standing at the chat-agents and that this is also the case when it gets too busy. To be able to do this, there is also an integration with T-Mobile's \acrfull{crm} system. If it gets busy, we pick it up and then they send the customers an alternative message saying that it is currently too busy and asking them to come back later. In that sense, the chatbot also works for workforce management to ensure that these processes don't go completely haywire, so that customers don't have to wait in the queue for three hours. There is also a bit of advice based on products that you can buy, but that is a decision aid that is included. I think that largely covers it.
+	
+	\subsubsection{What about the workload of customer service staff?
+		What proportion of the requests is routed back to the employee?}
+	Wisse: There are quite a few chats. I think it's not so much that we don't recognise everything that customers ask about, but also that customers are often not satisfied with the answer. You have to imagine that we receive a lot of questions about incorrect invoices and about other things that customers have (complaints). If they receive an answer from an automated chat, which they don't like either, then those customers always have the incentive to think "yes, wait a minute, but I don't agree with that, I'm going to go and see the human employee anyway". It also happens enough that we don't recognise these things because customers, and we certainly see this per channel, communicate quite awkwardly. It's not that they always communicate in neat ABN Dutch or perfect Flemish. It is often a big chaos in terms of sentences that sometimes come in, Nike knows all about that too. This also means that if we already have difficulty recognising these sentences, a classification model, which is in fact a computer, will have much more difficulty doing so. On top of that, we now have a huge number of intents, hundreds and hundreds of them, which means that you have to predict hundreds of different classes and actually determine which one is which, and yes, that can go wrong sometimes. So you really do have a considerable number that go on to an employee and then the idea is to make sure that those people end up with the right employee as best as possible.\\
+	\break
+	Laura: To make it very concrete, you see that in up to 25\% of the cases we are not able to answer the question, whether it is because of what Wisse says about is it the challenge of recognising the question and how it is typed, or that we actually cannot answer the question, or because it might be a very customer-specific question.\\
+	\break
+	Wisse: Of course, the chatbot cannot answer everything, because there are many cases in which the chatbot can play a very nice role, but there are also enough cases in which it is just too complex and then you have to make sure that the chatbot facilitates the handover as soon as possible, because ultimately you want to help the customer as much as possible. If the chatbot can't play a role in that, then it has to recognise that it needs to move on quickly.
+	
+	\subsubsection{What is the customer's willingness to use the chatbot?
+		Why do you think the willingness is not / is so high?}
+	Laura: We do have some indications of what we do, for example, is collect feedback both in the chatbot and on the website. We also ask the customers the question, were you helped? We also leave the possibility for open feedback, which has given us some insights recently, and then you find that the customers who have tried the chatbot also ended up calling. That does give a distorted picture, so I do want to give you that, but this is what I have seen and know. Of course, those customers say that the chatbot is no good or that it doesn't work. Yes, eventually they had to call (biased feedback participants). What we are going to do or what we are doing is testing personas. We will then do this with customers, so based on which persona we will look at how more willing they are to engage with the chatbot. 
+	Nike: We also look at the avatar, which image you should see there.\\
+	\break
+	Wisse: Of course we have to accept that customers will simply not always be satisfied. I will be the last one to say that the chatbot is perfect, because there are always things that can be improved. Nike has just started 4 weeks ago, but it is very good that Nike is back because there is so much and can improve so much. It's something you have to keep in mind anyway. T-Mobile solved it in that sense, they just said that if you want to chat with us, you have to pass the chatbot first, that's a choice of course. It also ensures that part of the question simply depends on people who might have thought "well, we'll send the employee right away", but that's no longer possible and because of this aspect, they can also better manage their workforce, there are several advantages to this for T-Mobile that seem to outweigh making the chat immediately available.\\ 
+	\break
+	Nike: Keep monitoring and keep optimising, that is the strategy.
+	
+	\subsubsection{There is a positive side to the chatbot, but of course also a negative side.
+		Have you noticed more frustrations from users or more complaints with the
+		chatbot?}
+	Wisse: You certainly do have frustrated customers and of course if you are very angry because you have a conflict with T-Mobile or you have not been helped for a long time and a chatbot comes on top of that, it is certainly not good for the customer's mood. We have really looked into how to deal with that and there are more far-reaching plans. For example, we could recognise customer emotions and integrate this into the chatbot. On the basis of that, you can decide that it would be better to just pass this customer on to the agent, because his emotions are rather negative.\\
+	\break
+	Laura: These are CAPS LOCK customers, if you only see caps locks in the answers, then you already know that you better just send the customer on.\\
+	\break
+	Wisse: You can also just put a bit of classification behind it or in between, with which you can classify what the emotions of the customer are, and that's what we did in the project to see how far we can take this. You can see that there are enough customers who benefit from a chatbot. There are certainly customers who are less happy with the presence of the chatbot.\\
+	\break
+	Nike: I don't really know how we do it at T-Mobile, but I'm used to it that you also keep track of when you don't understand a customer, then you count how often you don't understand a customer. If this is too high, then you switch the customer on, because then you know that the frustration is already high. Maybe it's because the customer can't type his question properly or because his question is too verbose or too compact, but it could just as well be because of the chat box.\\
+	\break
+	Wisse: Of course you don't want your customer to end up in an endless loop, which would make him very unhappy. In that sense, we now have a number of times that you can try, if it doesn't go well, then you indeed go through to an employee to keep the customer journey as optimal as possible.\\
+	\break
+	Laura: Of course, you can also influence this, now it is set to three times (that the customer can try), but you could also see what if we wanted to make it two times?
+	
+	\subsubsection{Is sentiment analysis also present in the chatbot?}
+	Wisse: No, in the end it is of course the priority determination of everything you want to do. We have also been adding components for four years now, so sentiment analysis has been done, a classifier has also been built for that, but it has not been integrated yet. Now, we do recognise examples of customers who indicate that they are not satisfied, for instance if you say, "Never mind, this isn't working", then that is recognised as a certain intent for that kind of answer to that kind of customer question and then you still get a handover, but that is actually a stupid way of doing sentiment analysis. I actually did build the classifier for sentiment, only it was never integrated, because if you look at all the other features that still had to be built, it wasn't high enough on the priority list and then you get an item that stays on the backlog. I also don't think it's very urgent to pick that up, because I think most of the people just pick it out based on the intent we have for it now, you just get offered a handover. At the moment, they say "Sorry I can't help you, there's a member of staff here", so it would certainly be an improvement, but it's a bit of a question of how urgent you consider it compared to other features.
+	
 	\subsection{The business value of the chatbot.}
+	\subsubsection{Do you have an idea about the increase in sales due to the use of the chatbot
+		and whether there is any at all?}
+	Laura: I think an increase in sales is very difficult to classify. We could share something about how often, for example, we pass something on to sales where a concrete lead (sale) can come from.\\
+	\break
+	Wisse: I find it difficult to say anything about that. A chatbot used to be made available on more channels, so in addition to sending an e-mail, which used to be possible, you could also call on the website and via Facebook, you could also talk to T-Mobile. It's not that that automatically means that people who would have called first would now go for the chatbot. Because yes, being available in more places means more traffic anyway, so it's not like we have a fixed number of customers that we're going to spread across a number of channels. It's not that Laura can say, well, we want more people in the chatbot, so we just throw a chatbot button on the website and then it shifts automatically. It may well be that people are also more likely to go to such a chatbot, where perhaps people first went to look for the same thing in the app and have now had a positive chatbot experience a few times. We literally see people who have a "limited" subscription (with limited you don't get infinite data). At some point you have to buy an extra data bundle or you have to top it up again as a kind of protection so that you don't abuse it. We can see in the logs of people who had just bought an extra bundle 80 times within the chatbot, because it was saying "hey, just buy an extra bundle" and he had another bundle. So it wasn't that we cut some traffic away from the telephone channel, but simply because it was so easy to have the chatbot, for example because it was so accessible, we got more traffic. The question of whether you can quantify what a chatbot has yielded. I don't want to know how many times I've had that and also from other customers. I work for an \acrshort{it} company that also sells them, and it's just difficult to quantify that in an honest number, because you can stick a number on it like, well, there are so many chats and we have so much deflection, so that translates into so many euros. I am not necessarily 100\% behind it in that way, to simply say that this is what it yields and we will see, indeed, what Laura also says.\\
+	\break
+	We measure very much "how many handovers do we give to sales?". You can then say something about that, for example, that so many 1000 people a week or a month are sent through a sales department, and you can really put a label on that, but I can't just give you a number or a given percentage of this is the increase or the euros that we have earned through the chatbot. With them, we do measure the quality, also mainly on the basis of what the customers say whether they were helped or not. So we do what Nike said, evaluation is very important in a chatbot because your features can be as great as they are, but if the dialogue isn't right and the classification isn't good, then you're still nowhere, so we're very much focused on the helped-check question that we put in after every dialogue, so we just say, did I help you? That's one of the goals we're working on, in order to get it as right as possible. It's not yet the case that more people say yes than no, because ultimately more people will say, "I'm not helped", but that percentage can of course be pushed more and more in the direction of a 100\% yes as far as that' s possible.\\
+	\break
+	Nike: Take this with a grain of salt because sometimes people just say, "I'm not well served" because they don't like the answer.\\
+	\break
+	Wisse: Indeed, the answer then perfectly matches their question, only they don't like the answer, because they haven't got enough money, for example. Which then turns into the following scenario: "Have I helped you? Certainly not, no". But I can't really give an answer in the sense of quantifying the percentage, turnover or profit that has been made. We also see that it has become better and better over the years, not only in terms of the flexibility that we have achieved, but also in the number of people who say that they have been helped. You can see a chatbot as a house, it's a beautiful house that you are building, but if you don't have content, you don't have furniture in it. We are now filling that house more and more, because we are also hiring more and more people. We are putting more and more emphasis on evaluation (turning feedback into better quality). Over time, we see a very steady upward trend. However, it is difficult to express that in euros. 
+	Nike: We also look at how many calls are handled by people on how many customers, but of course that does not reflect everything.\\
+	\break
+	Laura: Yes, so looking at turnover is complicated, but we can emphasise that there are fewer calls, and therefore fewer costs for employees who have to take on these tasks. We are really influencing that on the website. Through AB testing, we can make a prediction/indication on how many less call clicks we will see if we offer the chat more prominently, and how many more chatbot calls we will then have.\\
+	\break
+	Nike: Yes, and how much shorter those calls will be if people have been to the chatbot first, in this situation the chatbot can already gather information and then the employee can deal with it more quickly (Still to be implemented).\\
+	\break
+	Wisse: That's another purpose of the flexi. From yes, I can use the chatbot to collect certain information to ensure that the agent's handling time is again shorter. This is still a lesser focus, but it is certainly something that you could look at in the future, for example, to make phone calls better if you can use a chatbot to extract certain key points that your employee can use when dealing with her/his case. If you're talking about looking at how many fewer calls are made because the chatbot is more prominently featured, it's also possible that customers who might not have called or chatted in the first place will contact you because the chatbox is more prominently featured. You're not working with a fixed pool of customers and you know that I'm going to get 100,000 calls every month. No, it just fluctuates a lot with failures. We sometimes have home failures that last a number of weeks, then you can count on it, then it goes up at once if there is opposition. We have an iPhone release, well if that gets on the website you can see that, because then suddenly half the Netherlands has to have the latest iPhone. It means that in the following months we have an enormous increase in chats about the order status, because there were also a lot of questions. Then there are all those "foreign" questions that Laura is now working on to give that an extra push, so you also have very seasonal peaks, but also business-related peaks that actually have a huge impact on how many chats you get or how many calls you get, et cetera. So it also makes it all the more difficult to quantify this again because you can't say one on one. If we do better chat, we'll see a reduction in calls, because for the same money, there's something else that's very much affecting us.
+	
+	\subsubsection{How much of the original agents' work is now taken up by your chatbot?}
+	Laura: What we monitor is chatbot-to-call, so if a customer has spoken to the chatbot and then contacts it by phone within 48 hours. That's something we have insight into (max 25\%). We try to influence the percentage, of course, and how many less men are needed on the other side, that's incredibly operational. We do have certain costs that we link to the phone call, so if we influence the percentage, we also know how many less costs that is. Ultimately, that translates to how many fewer people you need. Of course, yes, what we do see is that now that we are offering the chatbot very prominently to customers, we are really able to influence that percentage and that is only going to become clearer in the coming period because we want to turn even more knobs to influence that. Yes, but it's not really possible to say that you need five fewer people, these are huge volumes, so I'm not so sure about that.\\
+	\break
+	Wisse: I know that at workforce management, the department that manages the chat staff, so to speak. Since we have added the chatbot, they are actually much better at grading their employees. The fact that this varies enormously for people who actually sit behind a computer. Because we collect the data very accurately for them and also make it transparent, they can simply view it on a dashboard and that is much easier. We also produce weekly reports that we send to them, and by analysing that data they can determine much better, 'OK, you know, I need to have so many people in at 4 o'clock on Monday afternoon and to ensure that we can get everyone through. They are very focused on the percentage of how many customers I have had that I have not been able to offer in handover, and of course they want to get that to zero, because that is what they are judged on. So because the data is more transparent and because we can also set, well, pretty hard limits, workforce management can make much more optimal use of the resources that they have and therefore use them better. I don't know how much it saves them, but I do know that WM is very happy with the fact that this data is available and that they have it nowadays.
+	
+	\subsubsection{We assume that the chatbot is available 24/7, but what happens if it cannot solve a question outside of working hours? Is the question still answered or is it postponed until the next working day?}
+	Wisse: What we do now is outside opening hours, because actually you are talking about outside opening hours. So we have inside opening hours and outside opening hours and we keep track of the opening hours in a small database. When you are chatting with the chatbot, we first check whether you are inside or outside opening hours. Depending on that, your welcome message will also be adjusted, so if you're within opening hours, you'll get something like "Hi my name is Lotte, if I can't help you further, I'll try to refer you to a staff member as soon as possible" and if you're outside opening hours, we'll pick up the next moment when the offices are open again. Then we just say, "Hi, my name is Lotte, at the moment my colleagues are not at work, but on this day and at this time they will be back", so if the chatbot can't help, they already know. Then we're going to do our fixed line of "Well, how can I help you?", and then they're going to ask questions. In case they are not helped, then they go to an alternative handover, which is in fact that phone number again, but also the opening hours, so "We are available again from then until then" to communicate back later when colleagues are at work. So that's actually how we handle it. There are conversations to set up messaging style, so what you were talking about before it is then helped later, so then of course in that sense you would put the chatbot in there. But if it doesn't work, it just stays there until a member of staff arrives to deal with it, and that's one of the aims, to set that up because we also see the value of it. Because of course you can make better use of your resources because they don't have to give an immediate answer, but can postpone it for half an hour, for example. So that's definitely something we're looking at implementing.
+	
+	\subsubsection{You have indicated that the chatbot introduces itself as Lotte, do you want the chatbot to impersonate a human being or just a bot?}
+	Nike: It is very important not to give the impression that it is a human employee. You don't want people to feel cheated when they realise they are not chatting to a human. They do have a human name by chance, but they introduce themselves as "Hi, my name is Lotte, I am the chatbot from T-Mobile ...". \\
+	\break
+	Wisse: We are currently working on reworking the persona, so you can put as much time and effort into that as you like, of course, because you can build it yourself and at least think about it. There is a company working on developing the perfect avatar for Lotte (T-Mobile) and for Tara (Tele2) we already have a kind of dressed up muffin, or so it seems. It's not very realistic. It's certainly not a real person. It's kind of funny, because the company that's doing the assignment now also came back with hyper-realistic avatars. Really? You have to think of video game-like figures that are just in the latest of the latest games. That's where we all had a different opinion, because one thinks it should be hyper realistic and I personally think you should stay far away from that with a chatbot, because you're going to create the wrong expectation, so you want to clearly indicate to a customer by means of "I am a digital employee within Digital Assistant or a chatbot or whatever". In other words, you create the right expectation and then, for example, a hyper-realistic adventure will not play the role that you hope it will, but opinions differ on this, because there are also people who want it.\\
+	\break
+	Nike: In addition to the avatar, we also have a persona description. That's also still in development. So you have, for example, "What kind of person is that?", "What kind of characteristics does that chatbot persona have?", "What kind of writing style?" and things like that.
+	
+	\subsubsection{Do you have an estimate of how much the chatbot costs? Can you tell us something about the biggest cost items?}
+	Nike: Of course, it is made up of so many parts. You probably also have the cloud platform that you are making the tool in. You need infrastructure, you need staff. Yes, I don't know exactly what costs you're looking for either, but I wonder if we have the right amount of money.\\
+	\break
+	Wisse: I do know and what I think I can say, but Laura stops me if I'm not allowed to say it. That is that if you look at the running cost, because we have our chatbot running in the cloud, so that's a number of cloud components that are obviously doing their thing there. We use Dialogflow from Google, which is basically just \acrshort{ai} with a \acrfull{cms} behind it. The amount of chats we do and then all the infra costs, that's hundreds to thousands per month of running costs purely because you have to call up that classification \acrfull{api}. You also have to use context, you have to store things in databases, retrieve things from the databases, et cetera. You have to run engines in order to have all the components running, and that just costs steady money. We now have two developers working on the chatbot team of the various chatbots here in the Netherlands, one of whom is me, a colleague of mine is the "Tech Lead" and we have a number of colleagues in India who are full-stack developers, that makes two of them. We now have two conversation designers and two \acrshort{ai} trainers, so to speak, and another guy is coming. I think the developers are a bit more expensive than the conversation designers, but it won't be all that much of a difference to be honest.\\
+	\break
+	Laura: The investment in people, also because it is such a specialism, is many times bigger than what we pay for technology. \\
+	\break
+	Wisse: It's very reasonable if you look at what you get for the amount of chats you do, because that's really in cents per call if it's much less than that, because ultimately it's just a few messages being ping-ponged back and forth on a cloud network with a number of microservices talking to each other. The investment in the \acrshort{fte}s who walk around here to implement everything, do the ongoing consulting with the customer, coordinate it with the people who manage the language and manage the content. The meetings we have to attend with Laura. I think those are the biggest costs. I think T-Mobile does a very good job there because they look out of the box. T-Mobile has very clearly chosen to buy a customized solution. From ATOS we said OK, what do you want? They already had a chatbot, but they were not satisfied with it. They wanted something else that really connected to their backend, all integration. So now they are integrated with the \acrshort{cms}, with their customer \acrshort{api}, ... Then you also have to pay for the costs of development and maintenance and expansion. Officially, I believe we are now in maintenance mode. We are also happily continuing to develop, because a great deal is being developed and that just costs money. You know, \acrshort{it} costs a lot of money. So the majority of the costs are in the hands of the people.
+	
 	\subsection{The future vision of the chatbot.}
+	\subsubsection{What are the most important points of attention for the near future? I
+		assume this is mainly the automation process for your new platform, but are
+		there any other specific things you want to tackle?}
+	Nike: I don't know if we have such a list, but I would say better recognition and more and more integration, so that you can handle more complex processes all the way through the chat box.\\
+	\break
+	Laura: That does fit in. We have five development themes that we have formulated together. The first is to make the chatbot more proactive, and that's also a bit of integration in the entire customer journey, so think of perhaps also from the mail, for example, that they can find the chat better, prominent place on the web. Also investing in making it more transactional. This means not only providing answers, but also more integrations, more personal feedback. Think of two very specific projects that are now in the pipeline, which Wisse also hinted at. So in the messaging and therefore from the app that backlog can be created for that employee instead of setting up a direct live chat connection that needs a connection synchronously, so a solution that allows asynchronous communication. We now have an app on a separate tab on the website. That is really from a few years ago or more, so we really want to integrate this into the frontend on the website. Those are two very concrete projects that are in the pipeline right now.\\
+	\break
+	Wisse: It is very important to add that one of the focuses of the past 1.5 years has been on ownership to the business. Consultants cost a lot of money and developers are complicated people, so it is more convenient to make it accessible to the people who manage the content for T-Mobile or to someone who, for example, cannot necessarily program, but does understand a language model. What has been very important recently is the implementation of a lot of tools to actually simplify the process, because maintaining a chatbot takes a lot of time and by making smart tools, which can come in many forms, you can simply speed up processes. These tools are now rapidly being simplified as much as possible, so that they are also accessible to non-technical people. So we put a lot of emphasis on a bit of "evaluation", but we wanted to improve that "evaluation" and do it in the most efficient way possible. If we want to create a new intent, it does not take much time. I know that competitors do this with Excel spreadsheets and manually look up sentences and then rummage through their database, but we have a pipeline for that. It is all done in the frontend, then the data is retrieved, you can quickly clean up and with three clicks you have a new intent in your chat. These are all things that in themselves do not make much difference per intent. But if you pay Nike for a whole month to do a good job, you probably get twice as much done because there are all these different tools and fortunately T-Mobile sees the value in that. We are now benefiting from this with the entire team and it is precisely making these processes run as smoothly as possible that has been one of the big drivers for T-Mobile within the team, in any case, because the evaluation and improvement is also made to go faster.\\
+	\break
+	Laura: With the arrival of Nike as well, so that you actually say: yes, there is more than writing dialogues. That is important, but the recognition and further improvement of the language model is at least as important.\\
+	\break
+	Nike If you don't recognise the question, then your beautifully written texts are of no use to you.\\
+	\break
+	Wisse: I've experienced that the other way round as well. I mean, in the beginning we were very busy delivering features and at that time the business didn't really value content people that much. Well, we can be very grateful to Laura for that, because since she's been there, and we're lucky to be able to talk to her, we've managed to get a lot more hands involved. Especially when it comes to content, because when you talk about an empty house, that's not much use. You want to have nice furniture in it and if you invest heavily in that beautiful house, it has to be complete. You can have such a beautiful backend, but if there is no content, it won't work. You can also have a language model, but without content it won't work, so in the end all those 3 elements have to work together to get the best result.
+	
+	\subsubsection{Where does the knowledge/expertise for the chatbot come from? How do
+		you know what scenarios to add to the chatbot?}
+	Nike: We mainly use data analytics, so we can see all the messages that customers send. We can also see if the chatbot understands them. In which box do you collect them and with which intent do they end up. Then we can apply targeted querying, so for example you can look up how many people have asked a question with something about the word abroad or for holidays and where it ends up. You can also see which intents are called up the most.\\
+	\break
+	Wisse: When I look at the high-overview, we steer from two different points of view. We steer very much from how we improve things, we do that mainly based on how people rate the dialogues. The poorly rated dialogues are a trigger point to start looking at what Nike also said, of that you start looking into the data once of how the dialogue is received. We can read back chatbot dialogues. We just have a "dialogue history view" where you can search on a certain theme, and you can click through conversations there, so that's a starting point, but also that we have information tools to just evaluate certain topics or all sentences in a certain order and that you say this thing has passed and it goes in that bin, is that right? Yes, no, I'll just send another one, that can also be a starting point. Then you talk about what expertise you need to build a chatbot.  You need domain knowledge, we noticed. So people who have knowledge within the telecom sector, for example. You need development, because the content people may want all the integration you can get, but if you don't have the IT people to build it, you're still nowhere. You need business people who love the strategy and also facilitate things, because that is certainly important in such a large company. Ultimately, you also need people who have a bit of a data background, for example, because you will also have to do the data analysis. You will have to dig into the content to find out how classification works and whether it is compatible with the content. So there is a need for cooperation between IT between content and between the data. I think that's great in our team because we work very closely together in these different areas and we haven't split up into different domains. Some banks I knew had a separate sector for each domain and don't really talk to each other and that's quite annoying, because at the end of the day, it all depends on the other, so the operation between those different domains is also very important.
+	
+	\subsubsection{Is the chatbot AI or rule-based?}
+	Wisse: There is a classification model behind the chatbot, so in that sense we recognise the customer's intent by means of a piece of machine learning. It's just saying there, you have to have the perfect example, otherwise we'll cut you out. In terms of how we make decisions, there are also quite a few other things behind it, so for example, based on the availability of employees or that we use certain models from the intelligent departments to move certain customers on to employees. There are also business rules in this, of course, which you really can't grasp within machine learning. The classification is done by machine learning, so you could call that \acrshort{ai}-based. But it's just business rules that we've built that dictate how certain processes go. So with this handover too, if we pick up from the \acrshort{crm} system that there is a waiting time of 30 people, then the rule is that you do not go through. That rule is then adjusted by the workforce management, so there are people here who work on those buttons and set those rules. We actually facilitate the means by which you can adjust those rules, that's what it comes down to.
 	
 	\section{Interview with Telenet}
 	\label{in:Telenet}
+	Interviewed person : Chiara Portolani (Digital Channel Specialist in the \acrfull{das} \& Automation squad)
 	\subsection{The current state of the customer service chatbot.}
 	\subsubsection{For what purposes is the chatbot mainly used? Is it rather for \acrshort{faq}, is it also for complaints, to sell something or are there other examples for which the bot can be used?}
 	
@@ -383,5 +540,118 @@
 	\subsubsection{Where does the knowledge/expertise for the chatbot come from? How do you know what scenarios to add to the chatbot?}
 	Mainly through data analysis, and that's the advantage of using the bot across the board right from the start. We simply collected real customer questions and looked at what the most questions were about and then designed flows for the subjects that were asked the most often. We are still doing that. Every so often, we just go through a box of conversations and see if there are any topics in there that we don't have answers for.
 	
+	\section{Survey}
+	\label{ap:survey}
+	\subsubsection{Environment Variables}
+	For each environment variable was a question posed and an answer option given. The given options are discussed below. Email and postal code were left out in the data set online to keep the respondents anonymous.
+	\subsubsection{Email}
+	An open text field.
+	\subsubsection{Postal Code}
+	An open text field.
+	\subsubsection{Age}
+	An open text field.
+	\subsubsection{Degree}
+	A list with the following options:
+	\begin{itemize}
+		\item High School
+		\item Professional Bachelor
+		\item Academic Bachelor
+		\item Master
+		\item PhD
+		\item Other ...
+	\end{itemize}
+	\subsubsection{Gender}
+	A list with the following options:
+	\begin{itemize}
+		\item M
+		\item F
+		\item Other ...
+	\end{itemize}
+	\subsubsection{Chatbot Provider}
+	A list with the following options:
+	\begin{itemize}
+		\item Proximus
+		\item Telenet
+		\item Orange
+		\item T-Mobile
+		\item KPN
+		\item Other ...
+	\end{itemize}
+	\subsubsection{Task performed}
+	An open text field.
+	\subsubsection{Language}
+	A list with the following options:
+	\begin{itemize}
+		\item Dutch
+		\item French
+		\item English
+		\item Other ...
+	\end{itemize}
+	\subsubsection{Platform of interaction}
+	A list with the following options:
+	\begin{itemize}
+		\item On the website
+		\item In the app
+		\item Facebook Messenger
+		\item Other ...
+	\end{itemize}
+	
+	\subsection{Comparative Study}
+	The respondent was faced with 19 yes/no questions. These were the questions asked in order:
+	\begin{itemize}
+		\item Did you have any difficulties using the chatbot?
+		\item The chatbot did not ask the right questions to solve your task?
+		\item The chatbot didn't know what he was talking about?
+		\item Was the chatbot polite?
+		\item Did the chatbot fulfil your task correctly?
+		\item Was the chatbot easy to use?
+		\item Was it a task to interact with the chatbot?
+		\item Did the chatbot need help from a help desk agent to complete your task?
+		\item Did the chatbot contain enough knowledge to help with your problem?
+		\item Did you enjoy interacting with the chatbot?
+		\item Was the chatbot capable of completing the task on its own?
+		\item Did the chatbot ask you relevant questions to gather the information to solve your task?
+		\item Did the chatbot deliver a better quality of service than a human?
+		\item Did the chatbot interact in a respectful way?
+		\item Was the chatbot unable to complete your task?
+		\item The service provided by the human was of better quality?
+		\item Did you feel you could trust the information provided by the chatbot?
+		\item Did the chatbot perform the task as you expected it to?
+		\item Could you solve your problem/question after using the chatbot?
+	\end{itemize}
+	
+	\subsection{Importance Study}
+	The respondents were faced with 3 scenarios and some general questions. These are the 3 scenarios:\\
+	\ul{Scenario 1:} You haven't switched off your phone in a while and it suddenly ran out of battery. You have a problem because you don't remember your PIN code. You ask the chatbot if he can retrieve your PIN code given your client details.\\
+	\break
+	\ul{Scenario 2:} You're not happy with your subscription because it doesn't match your needs, from a friend you've heard there is a better deal and so you want the chatbot to stop your subscription.\\
+	\break
+	\ul{Scenario 3:} At least once each month, you lose internet connectivity. You're sick and tired of these problems and you want to file a formal complaint. You turn to the chatbot of your telecom provider with your complaint.\\
+	\break
+	For each scenario, they had to answer the same 6 questions in the following order:
+	\begin{itemize}
+		\item The chatbot DOES NOT execute the given task successfully.
+		\item The chatbot can NOT perform the requested service to the same level as a human agent.
+		\item The chatbot knows at least as much as an agent about the requested service.
+		\item The chatbot executes the given task successfully.
+		\item The chatbot knows less than an agent about the requested service.
+		\item The chatbot can perform the requested service to the same level as a human agent.
+	\end{itemize}
+	Afterwards, they were posed 6 general questions in the following order:
+	\begin{itemize}
+		\item The chatbot is NOT available at all times.
+		\item The chatbot is easy to use.
+		\item The chatbot communicates in a robotic, non-empathic way.
+		\item The chatbot is available at all times. 
+		\item The chatbot is NOT easy to use.
+		\item The chatbot DOES NOT communicate in a robotic, non-empathic way.
+	\end{itemize}
+	They had to assign a score from 1-5 to each questions, indicating how important that statement was for them. The five options available were:
+	\begin{enumerate}
+		\item I dislike it
+		\item I can live with it
+		\item I am neutral
+		\item I expect it
+		\item I like it
+	\end{enumerate}
 \end{appendices}
-

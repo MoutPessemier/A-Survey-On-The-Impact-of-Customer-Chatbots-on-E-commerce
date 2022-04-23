@@ -18,10 +18,13 @@
 \definecolor{kuleuven}{RGB}{29,141,176}
 \definecolor{kuleuven1}{RGB}{82,189,236}
 
+
 \newcommand{\nocontentsline}[3]{}
 \newcommand{\tocless}[2]{\bgroup\let\addcontentsline=\nocontentsline#1{#2}\egroup}
 
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
 
 \allowdisplaybreaks
 
@@ -39,6 +42,7 @@
 	name={Interactive Voice Response (IVR)},
 	description={Interactive voice response is a technology that allows humans to interact with a computer-operated phone system through the use of voice and DTMF tones input via a keypad.}
 }
+
 \newacronym{ai}{AI}{Artificial Intelligence}
 \newacronym{ml}{ML}{Machine Learning}
 \newacronym{nlp}{NLP}{Natural Language Processing}
@@ -59,6 +63,14 @@
 \newacronym{vrs}{VRS}{Voice Response System}
 \newacronym{ces}{CES}{Customer Effort Score}
 \newacronym{gcr}{GCR}{Goal Completion Rate}
+\newacronym{das}{DAS}{Digital Assisted Service}
+\newacronym{mvno}{MVNO}{Mobile Virtual Network Operators}
+\newacronym{cms}{CMS}{Control Management System}
+\newacronym{url}{URL}{Uniform Resource Locator}
+\newacronym{crm}{CRM}{Customer Relationship Management}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{fte}{FTE}{Full-Time Equivalent}
+
 
 \makeindex
 
@@ -76,8 +88,8 @@
 	\input{../LaTeX/LiteratureStudy.tex}
 	\input{../LaTeX/Methodology.tex}
 	\input{../LaTeX/Research.tex}
+	\input{../LaTeX/FutureResearch.tex}
 	\input{../LaTeX/Conclusion.tex}
-	\input{../LaTeX/Summary.tex}
 	
 	%Appendices
 	\input{../LaTeX/Appendices.tex}
