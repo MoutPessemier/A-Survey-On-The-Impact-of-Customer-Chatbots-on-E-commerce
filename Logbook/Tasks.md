@@ -23,6 +23,7 @@
 | Data Analysis (also see meeting)                   | 4:20u  |
 | Write-out interview Telenet                        | 4:20u  |
 | Put interview Proximus in Latex                    | 1:10u  |
+| Proofread Rob's added parts                        | 40min  |
 | Translate interview Telenet                        | 1:25u  |
 | Put Telenet interview in Latex                     | 35min  |
 | Kano data analysis & research                      | 6:25u  |

@@ -31,3 +31,4 @@
 | 19/04/2022    | Mout, Rob, Mr. Etikala                                    | Discuss research and limitations of research                                                                             | 45 minutes |
 | 20/04/2022    | Mout, Rob                                                 | Map functional and dysfunctional to survey and pictures of research                                                      | 45 minutes |
 | 21/04/2022    | Mout, Rob                                                 | Work division + discuss the 'discussion' part                                                                            | 20 minutes |
+| 23/04/2022    | Mout, Rob                                                 | Discussion and review written parts research + conclusion                                                                | 30 minutes |
