@@ -32,6 +32,7 @@
 | Write research                                     | 8:00u  |
 | Write discussion                                   | 50min  |
 | Add survey to appendices                           | 25min  |
+| Fix errors in TexStudio                            | 20min  |
 
 # Rob
 | Task                                                 | Time      |
