@@ -33,3 +33,4 @@
 | 21/04/2022    | Mout, Rob                                                 | Work division + discuss the 'discussion' part                                                                            | 20 minutes |
 | 23/04/2022    | Mout, Rob                                                 | Discussion and review written parts research + conclusion                                                                | 30 minutes |
 | 01/05/2022    | Mout, Rob                                                 | Preparing defence draft                                                                                                  | 1 hour     |
+| 03/05/2022    | Mout, Rob, Mr. Etikala                                    | Discuss feedback final draft                                                                                             | 50 minutes |
