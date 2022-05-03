@@ -33,6 +33,7 @@
 | Write discussion                                   | 50min  |
 | Add survey to appendices                           | 25min  |
 | Fix errors in TexStudio                            | 20min  |
+| Apply feedback final draft                         | 2:00u  |
 
 # Rob
 | Task                                                 | Time      |
@@ -62,6 +63,7 @@
 | Review rmd-script + review result                    | 35min     |
 | Write-out comparative study (interviews)             | 5:35u     |
 | Write-out Conclusion                                 | 40min     |
+
 
 # Laurens
 
