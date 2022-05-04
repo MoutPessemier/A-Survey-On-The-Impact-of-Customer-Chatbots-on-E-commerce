@@ -64,6 +64,7 @@
 | Write-out comparative study (interviews)             | 5:35u     |
 | Write-out Conclusion                                 | 40min     |
 | Apply feedback to interview-part (Results)           | 3:00u     |
+| Write-out future research                            | 30min     |
 
 
 # Laurens
