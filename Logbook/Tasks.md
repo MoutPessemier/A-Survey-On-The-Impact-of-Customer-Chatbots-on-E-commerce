@@ -63,6 +63,7 @@
 | Review rmd-script + review result                    | 35min     |
 | Write-out comparative study (interviews)             | 5:35u     |
 | Write-out Conclusion                                 | 40min     |
+| Apply feedback to interview-part (Results)           | 3:00min   |
 
 
 # Laurens
