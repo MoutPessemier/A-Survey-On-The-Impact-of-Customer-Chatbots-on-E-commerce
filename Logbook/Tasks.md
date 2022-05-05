@@ -33,7 +33,7 @@
 | Write discussion                                   | 50min  |
 | Add survey to appendices                           | 25min  |
 | Fix errors in TexStudio                            | 20min  |
-| Apply feedback final draft                         | 4:25u  |
+| Apply feedback final draft                         | 5:00u  |
 
 # Rob
 | Task                                                 | Time      |
