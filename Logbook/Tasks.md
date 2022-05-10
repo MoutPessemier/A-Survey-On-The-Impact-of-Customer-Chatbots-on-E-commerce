@@ -35,7 +35,7 @@
 | Fix errors in TexStudio                            | 20min  |
 | Apply feedback final draft                         | 6:30u  |
 | Apply feedback Ella                                | 1:00u  |
-| Group graphs and make them better                  | 55min  |
+| Group graphs and make them better                  | 1:35u  |
 
 # Rob
 | Task                                                 | Time      |
