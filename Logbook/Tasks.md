@@ -67,7 +67,7 @@
 | Apply feedback to interview-part (Results)           | 3:00u     |
 | Write-out Future Research                            | 30min     |
 | Write-out Thankword                                  | 20min     |
-| Review thesis to limit word count                    | 3:00u     |
+| Review thesis to limit word count                    | 3:10u     |
 
 
 # Laurens
