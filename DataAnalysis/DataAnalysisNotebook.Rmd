@@ -1449,6 +1449,119 @@ for(i in 1: 19){
 }
 ```
 
+### Putting the 3 categories in one graph
+```{r}
+for(i in 1: 19){
+  yesT <- table(TFAQ[[paste0("q", i)]])["1"]
+  noT <- table(TFAQ[[paste0("q", i)]])["2"]
+  yesP <- table(PFAQ[[paste0("q", i)]])["1"]
+  noP <- table(PFAQ[[paste0("q", i)]])["2"]
+  yesO <- table(OFAQ[[paste0("q", i)]])["1"]
+  noO <- table(OFAQ[[paste0("q", i)]])["2"]
+  
+  yesT[is.na(yesT)] <- 0
+  noT[is.na(noT)] <- 0
+  yesP[is.na(yesP)] <- 0
+  noP[is.na(noP)] <- 0
+  yesO[is.na(yesO)] <- 0
+  noO[is.na(noO)] <- 0
+  
+  ynlabelsT <- c()
+  ynvalT <- c()
+  ynposT <- c()
+  cT <- c()
+  
+  ynlabelsP <- c()
+  ynvalP <- c()
+  ynposP <- c()
+  cP <- c()
+  
+  ynlabelsO <- c()
+  ynvalO <- c()
+  ynposO <- c()
+  cO <- c()
+
+  if(yesT > 0 && noT > 0) {
+    ynlabelsT <- c("yes", "no")
+    ynvalT <- c(yesT, noT)
+    ynposT <- c(yesT+1,noT+1)
+    cT <- c("blue", "red")
+  }
+  if ( yesT > 0 && noT == 0) {
+    ynlabelsT <- c("yes")
+    ynvalT <- c(yesT)
+    ynposT <- c(yesT+1)
+    cT <- c("blue")
+  }
+  if (yesT == 0 && noT > 0) {
+    ynlabelsT <- c("no")
+    ynvalT <- c(noT)
+    ynposT <- c(noT+1)
+    cT <- c("red")
+  }
+  
+  if(yesP > 0 && noP > 0) {
+    ynlabelsP <- c("yes", "no")
+    ynvalP <- c(yesP, noP)
+    ynposP <- c(yesP+1,noP+1)
+    cP <- c("green", "yellow")
+  }
+  if ( yesP > 0 && noP == 0) {
+    ynlabelsP <- c("yes")
+    ynvalP <- c(yesP)
+    ynposP <- c(yesP+1)
+    cP <- c("green")
+  }
+  if (yesP == 0 && noP > 0) {
+    ynlabelsP <- c("no")
+    ynvalP <- c(noP)
+    ynposP <- c(noP+1)
+    cP <- c("yellow")
+  }
+  
+  if(yesO > 0 && noO > 0) {
+    ynlabelsO <- c("yes", "no")
+    ynvalO <- c(yesO, noO)
+    ynposO <- c(yesO+1,noO+1)
+    cO <- c("orange", "purple")
+  }
+  if ( yesO > 0 && noO == 0) {
+    ynlabelsO <- c("yes")
+    ynvalO <- c(yesO)
+    ynposO <- c(yesO+1)
+    cO <- c("orange")
+  }
+  if (yesO == 0 && noO > 0) {
+    ynlabelsO <- c("no")
+    ynvalO <- c(noO)
+    ynposO <- c(noO+1)
+    cO <- c("purple")
+  }
+  
+  fsize <- 1
+  if(i == 12) {
+    fsize <- 0.95
+  }
+  
+  ynLabelsData <- c(ynlabelsT, ynlabelsP, ynlabelsO)
+  ynValData <- c(ynvalT, ynvalP, ynvalO)
+  ynPosData <- c(ynposT, ynposP, ynposO)
+  data <- c(table(TFAQ[[paste0("q", i)]]), table(PFAQ[[paste0("q", i)]]), table(OFAQ[[paste0("q", i)]]))
+  cols <- c(cT, cP, cO)
+  
+  b <- barplot(data,
+          main=questions1[i],
+          ylab="Count",
+          names.arg = ynLabelsData,
+          col=cols,
+          ylim = c(0,28),
+          cex.main = fsize)
+  abline(v=c(2.5, 4.9) , col="grey")
+  text(b, y=ynPosData, paste("n: ", ynValData , sep=""), cex=0.7, col = "red")
+  legend(x = "topright" , legend = c("Telenet: Yes", "Telenet: No", "Proximus: Yes", "Proximus: No", "Others: Yes", "Others: No"), fill = cols)
+}
+```
+
 ## Importance Study
 
 ```{r}
