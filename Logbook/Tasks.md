@@ -35,6 +35,7 @@
 | Fix errors in TexStudio                            | 20min  |
 | Apply feedback final draft                         | 6:30u  |
 | Apply feedback Ella                                | 1:00u  |
+| Group graphs and make them better                  | 1:35u  |
 
 # Rob
 | Task                                                 | Time      |
@@ -67,7 +68,7 @@
 | Apply feedback to interview-part (Results)           | 3:00u     |
 | Write-out Future Research                            | 30min     |
 | Write-out Thankword                                  | 20min     |
-| Review thesis to limit word count                    | 3:00u     |
+| Review thesis to limit word count                    | 3:10u     |
 
 
 # Laurens
