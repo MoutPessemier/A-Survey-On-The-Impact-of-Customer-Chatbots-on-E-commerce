@@ -36,3 +36,4 @@
 | 03/05/2022    | Mout, Rob, Mr. Etikala                                    | Discuss feedback final draft                                                                                             | 50 minutes |
 | 07/05/2022    | Mout, Rob                                                 | Remove words (word count: 11702)                                                                                         | 1.5 hours  |
 | 11/05/2022    | Mout, Rob                                                 | Happy birthday rob! answer main question + fixing whitespace                                                             | 1.75 hours |
+| 16/05/2022    | Mout, Rob                                                 | Going over the final changes found by proof reading the thesis                                                           | 1.25 hours |
