@@ -37,6 +37,7 @@
 | Apply feedback Ella                                | 1:00u  |
 | Group graphs and make them better                  | 1:35u  |
 | Thesis Poster                                      | 1:30u  |
+| Proof reading thesis                               | 1:25u  |
 
 # Rob
 | Task                                                 | Time      |
@@ -70,6 +71,7 @@
 | Write-out Future Research                            | 30min     |
 | Write-out Thankword                                  | 20min     |
 | Review thesis to limit word count                    | 3:10u     |
+| Proof reading thesis                                 | 1:10u     |
 
 
 # Laurens
