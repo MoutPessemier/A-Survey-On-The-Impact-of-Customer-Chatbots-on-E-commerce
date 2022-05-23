@@ -10,7 +10,7 @@
 
 ## Building the data analysis
 1. Clone the repository.
-2. Change the path to the data file in the `.Rmd` file, found under `./DataAnalysis/DataAnalysisNotebook.Rmd`.
+2. Change the path to the data file in the `DataAnalysisNotebook.Rmd` file, found under `./DataAnalysis/DataAnalysisNotebook.Rmd`.
 3. Open the terminal.
 4. `cd` into the repository.
 5. Enter: `cd DataAnalysis/`.
