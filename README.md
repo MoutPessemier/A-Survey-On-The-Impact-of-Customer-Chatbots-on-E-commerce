@@ -3,16 +3,18 @@
 ## Building the final paper
 1. Clone the repository.
 2. Open the terminal.
-3. Enter: `cd Thesis/build/`.
-4. Compile by typing in: `./buildAndCompile.sh`. If this doesn't work, try `bash buildAndCompile.sh`.
-5. The compiled pdf should open automatically.
+3. `cd` into the repository.
+4. Enter: `cd Thesis/build/`.
+5. Compile by typing in: `./buildAndCompile.sh`. If this doesn't work, try `bash buildAndOpen.sh`.
+6. The compiled pdf should open automatically.
 
 ## Building the data analysis
 1. Clone the repository.
 2. Open the terminal.
-3. Enter: `cd DataAnalysis/`.
-4. Compile by typing in: `./knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`. If this doesn't work, try `bash knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`.
-5. The compiled html file should open automatically
+3. `cd` into the repository.
+4. Enter: `cd DataAnalysis/`.
+5. Compile by typing in: `./knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`. If this doesn't work, try `bash knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`.
+6. The compiled html file should open automatically
 
 ## Contributors
 Mout Pessemier
