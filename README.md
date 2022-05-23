@@ -10,11 +10,12 @@
 
 ## Building the data analysis
 1. Clone the repository.
-2. Open the terminal.
-3. `cd` into the repository.
-4. Enter: `cd DataAnalysis/`.
-5. Compile by typing in: `./knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`. If this doesn't work, try `bash knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`.
-6. The compiled html file should open automatically
+2. Change the path to the data file in the `.Rmd` file, found under `./DataAnalysis/DataAnalysisNotebook.Rmd`.
+3. Open the terminal.
+4. `cd` into the repository.
+5. Enter: `cd DataAnalysis/`.
+6. Compile by typing in: `./knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`. If this doesn't work, try `bash knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`.
+7. The compiled html file should open automatically
 
 ## Contributors
 Mout Pessemier
