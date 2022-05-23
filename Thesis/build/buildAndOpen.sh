@@ -11,6 +11,7 @@ makeglossaries Masterproef
 
 #Build again after generating everyting
 pdflatex -synctex=1 -interaction=nonstopmode "Masterproef".tex
+pdflatex -synctex=1 -interaction=nonstopmode "Masterproef".tex
 
 #Open the file
 open Masterproef.pdf
