@@ -5,7 +5,7 @@
 2. Open the terminal.
 3. `cd` into the repository.
 4. Enter: `cd Thesis/build/`.
-5. Compile by typing in: `./buildAndCompile.sh`. If this doesn't work, try `bash buildAndOpen.sh`.
+5. Compile by typing in: `./buildAndOpen.sh`. If this doesn't work, try `bash buildAndOpen.sh`.
 6. The compiled pdf should open automatically.
 
 ## Building the data analysis
