@@ -1,10 +1,18 @@
-# Master Thesis: The impact of customer chatbots on e-commerce
+# Master Thesis: A study on the impact of customer service chatbots on the telecom industry
 
-In this thesis, a spotlight is shone on the impact of customer chatbots on the telecom industry. [WIP]
+## Building the final paper
+1. Clone the repository.
+2. Open the terminal.
+3. Enter: `cd Thesis/build/`.
+4. Compile by typing in: `./buildAndCompile.sh`. If this doesn't work, try `bash buildAndCompile.sh`.
+5. The compiled pdf should open automatically.
 
-### Sources
-A list of the sources we used in this thesis can be found [here](https://www.mendeley.com/reference-manager/library/groups/private/eb05d60a-8880-377e-a544-78557637e304/all-references/).
-
+## Building the data analysis
+1. Clone the repository.
+2. Open the terminal.
+3. Enter: `cd DataAnalysis/`.
+4. Compile by typing in: `./knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`. If this doesn't work, try `bash knitter.sh DataAnalysisNotebook.Rmd DataAnalysisNotebook.html`.
+5. The compiled html file should open automatically
 
 ## Contributors
 Mout Pessemier
@@ -14,3 +22,4 @@ Mout Pessemier
 Rob De Putter
 - [LinkedIn](https://www.linkedin.com/in/robdeputter/)
 - [Twitter](https://twitter.com/Rob_Deputter)
+
